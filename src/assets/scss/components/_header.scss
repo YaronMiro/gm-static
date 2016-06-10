@@ -1,0 +1,193 @@
+.header {
+  position: relative;
+  display: flex;
+  height: 8.125rem;
+  padding: .625rem 0 0 8.7rem;
+  justify-content: space-between;
+}
+
+.header__logo {
+  margin-top: .8rem;
+}
+
+.header__logo__img {
+  width: 16.875rem;
+  height: 5.2rem;
+}
+
+.header__user {
+  display: flex;
+  margin-left: 1.875rem;
+  align-items: center;
+
+  @include respond-at(1440px) {
+    margin-left: 1.7rem;
+  }
+}
+
+.header__user__guest {
+  margin-left: -6.5rem;
+}
+
+.header__user__bag-img {
+  width: 3.5rem;
+  height: 3.5rem;
+  user-select: none;
+}
+
+.header__user__login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $blue;
+}
+
+.header__user__login__btn {
+  width: 9.5625rem;
+  height: 1.8125rem;
+  margin: .45rem;
+}
+
+.header__user__login__link {
+  font-family: $alef;
+  font-size: .875rem;
+  text-decoration: none;
+  color: $blue;
+}
+
+.header__user__img {
+  width: 3.125rem;
+  margin: .625rem;
+  border-radius: 50%;
+}
+
+.header__user__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__user__info__name,
+.header__user__info__notification {
+  text-decoration: none;
+}
+
+.header__user__info__name {
+  @include font($regular, 1.125rem, $almoni);
+  color: $black;
+}
+
+.header__user__info__notification {
+  @include font($regular, 1rem, $alef);
+  white-space: nowrap;
+  color: $light-blue;
+}
+
+.header__search {
+  position: absolute;
+  top: 0;
+  display: flex;
+  width: 7.8125rem;
+  height: 135%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $dark-blue;
+}
+
+.header__search__img {
+  margin-top: 2.5rem;
+  height: 2.5rem;
+}
+
+.header__search__title {
+  @include font($regular, 2rem, $stanga);
+  margin: 0 2rem;
+  text-align: center;
+  color: $white;
+}
+
+.ie10 {
+
+  .header {
+    margin-top: 25px;
+  }
+
+  // Fix flexbox issues on IE10 by switching to table layout
+  .header__user__guest {
+    display: table;
+  }
+
+  .header__user__login__btn {
+    display: table;
+  }
+
+  .header__user__login__link {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .header__user__logged-in {
+    .header__user__bag-img {
+      margin-left: -80px;
+    }
+  }
+
+  .header__user__bag-img {
+    margin-left: -50px;
+    display: table-cell;
+  }
+
+  .header__user__info {
+    display: table;
+  }
+
+  .header__user__login {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .header__user__img,
+  .header__user__info__name {
+    margin-right: 100px;
+    display: table-row;
+  }
+
+  .header__search {
+    margin-top: -30px;
+    height: 160%;
+  }
+
+}
+
+.ie11 {
+  .header__logo__img {
+    height: 5rem;
+  }
+
+  .header__user__bag-img {
+    width: 3.5rem;
+  }
+}
+
+// Absolutley positioned flex child bug 'fix'
+.ie10,
+.ie11,
+.firefox {
+  .header__user__logged-in {
+    margin-right: 130px;
+
+    @include respond-at(1440px) {
+      margin-right: 430px;
+    }
+
+    @include respond-at(1024px) {
+      margin-right: 130px;
+    }
+
+    @include respond-at(768px) {
+      margin-right: 100px;
+    }
+  }
+}

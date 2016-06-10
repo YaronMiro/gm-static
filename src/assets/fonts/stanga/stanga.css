@@ -1,0 +1,18 @@
+@font-face{
+	font-family:'stanga';
+	font-weight:700; /*(bold)*/
+	font-style: normal;
+	src: url('stanga-aaa-700.eot');
+	src: url('stanga-aaa-700.eot#iefix') format('embedded-opentype'),
+		url('stanga-aaa-700.woff') format('woff'),
+		url('stanga-aaa-700.ttf') format('truetype');
+}
+@font-face{
+	font-family:'stanga';
+	font-weight:400; /*(light)*/
+	font-style: normal;
+	src: url('stanga-aaa-400.eot');
+	src: url('stanga-aaa-400.eot#iefix') format('embedded-opentype'),
+		url('stanga-aaa-400.woff') format('woff'),
+		url('stanga-aaa-400.ttf') format('truetype');
+}
