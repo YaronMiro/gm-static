@@ -567,20 +567,24 @@ body {
   margin-right: 0;
 }
 
-.nav__list__item__with__icon {
+.nav__list__item__with--icon {
   position: relative;
   cursor: pointer;
 }
 
-.nav__list__item__with__icon:hover {
+.nav__list__item__with--icon:hover {
   color: #23b574;
 }
 
-.nav__list__item__dropdown {
+.nav__list__item--active {
+  color: #23b574;
+}
+
+.nav__list__item--dropdown {
   padding-right: 1em;
 }
 
-.nav__list__item__dropdown::after {
+.nav__list__item--dropdown::before {
   content: "";
   position: absolute;
   top: 1.4em;
@@ -589,6 +593,20 @@ body {
   height: .4em;
   background: url("/gm-static/images/elements/dropdown-arrow.svg") no-repeat;
   opacity: 0.8;
+}
+
+.nav__list__item--dropdown.nav__list__item--active:hover {
+  color: #23b574;
+}
+
+.nav__list__item--dropdown.nav__list__item--active::after {
+  position: absolute;
+  right: -0.25em;
+  bottom: -0.2em;
+  content: "";
+  border-left: 0.5em solid transparent;
+  border-right: 0.5em solid transparent;
+  border-bottom: 0.5em solid #fff;
 }
 
 .nav__list__item__link {
@@ -638,15 +656,6 @@ body {
   position: relative;
 }
 
-#header__container__dev::after,
-#header__container__tips::after {
-  position: absolute;
-  top: -0.5em;
-  border-left: 0.6em solid transparent;
-  border-right: 0.6em solid transparent;
-  border-bottom: 0.6em solid #fff;
-}
-
 #header__container__dev.header__container--visible,
 #header__container__tips.header__container--visible {
   display: none;
@@ -657,14 +666,6 @@ body {
   #header__container__tips.header__container--visible {
     display: block;
   }
-}
-
-#header__container__dev::after {
-  left: 34.86em;
-}
-
-#header__container__tips::after {
-  left: 46.98em;
 }
 
 .header__container__list {
@@ -714,12 +715,15 @@ body {
 }
 
 .header__container__search {
-  line-height: 3em;
   font-size: 1.1rem;
+  font-weight: 200;
+  font-family: "roboto_condensed";
+  height: 3em;
 }
 
 .header__container__search__input {
   width: 100%;
+  height: 100%;
   padding: 0 .9em;
   border: 0;
   color: inherit;
@@ -742,6 +746,7 @@ body {
   border: 0;
   color: inherit;
   width: 100%;
+  height: 100%;
   padding: 0;
   border-right: 1px solid #23b574;
   border-left: 1px solid #23b574;

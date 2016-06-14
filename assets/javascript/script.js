@@ -35,23 +35,27 @@ function navigationDropdown() {
 // Get the target element ID.
   $( '[data-dropdown-target]').click(function(event) {
 
-    // The target element ID.
-    var targetId = $(event.target).data('dropdownTarget');
-    // The target element.
+    // The "trigger" element that was selected.
+    var triggerElement = event.target;
+
+    // The target dropdown to "activate".
+    var targetId = $(triggerElement).data('dropdownTarget');
     var $target = $(targetId);
 
-
-    // In case the element is visible then hide it.
+    // In case we want to deactivate an "active" dropdown.
     if ($target.is(":visible")) {
+      $(triggerElement).removeClass('nav__list__item--active');
       $target.removeClass('header__container--visible');
     }
-    // In case the element is not visible then hide any previous element if
-    // exists and show the target element.
     else {
-      // Hide Previous element.
-      $('.header__container--visible').removeClass('header__container--visible')
-     // Show the target element.
+      // Hide any other "active" dropdown.
+      $('.header__container--visible').removeClass('header__container--visible');
+      $('.nav__list__item--active').removeClass('nav__list__item--active');
+
+      // "activate" the target dropdown.
       $($target).addClass('header__container--visible');
+      $(triggerElement).addClass('nav__list__item--active');
+
     }
   })
 }
