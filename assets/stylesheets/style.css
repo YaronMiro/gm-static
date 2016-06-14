@@ -912,7 +912,7 @@ body {
   font-size: 1.5rem;
   font-weight: 100;
   font-family: "catamaran";
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   font-weight: inherit;
   line-height: 1.8rem;
   text-align: center;
@@ -923,7 +923,7 @@ body {
 }
 
 .hero_content__container__icons-list {
-  margin: 0 0 0.6em;
+  margin: 0 0 .8em;
   padding: 0;
   color: rgba(255, 255, 255, 0.75);
   list-style: none;
@@ -944,11 +944,12 @@ body {
 }
 
 .hero_content__container__slogan__logo {
-  color: #333c45;
-  font-size: 3.8rem;
-  font-weight: 600;
-  line-height: 1.7rem;
-  margin-bottom: 0.33em;
+  display: inline-block;
+  width: 4em;
+  height: 1.88em;
+  background-image: url("/gm-static/images/elements/logo.svg");
+  background-repeat: no-repeat;
+  background-size: 3.9em;
 }
 
 .hero_content__container__slogan__title,
