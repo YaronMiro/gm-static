@@ -704,6 +704,28 @@ body {
   text-decoration: none;
   /* For each color in the map, create an own class */
   /* The $colors is declared on variables.sass */
+  /* For each color in the map, create an own class */
+  /* The $colors is declared on variables.sass */
+}
+
+.header__container__list__item__link.c--blue:hover {
+  color: #29aae3;
+}
+
+.header__container__list__item__link.c--green:hover {
+  color: #23b574;
+}
+
+.header__container__list__item__link.c--purple:hover {
+  color: #77429c;
+}
+
+.header__container__list__item__link.c--pink:hover {
+  color: #ef3588;
+}
+
+.header__container__list__item__link.c--orange:hover {
+  color: #fbb03d;
 }
 
 .header__container__list__item__link.c--blue::before {
