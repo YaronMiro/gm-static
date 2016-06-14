@@ -417,26 +417,70 @@ textarea {
 }
 
 body {
-  font-weight: 200;
+  font-weight: 100;
   font-family: catamaran, Arial, sans-serif;
   letter-spacing: .015rem;
+}
+
+.c--blue {
+  color: #29aae3;
+}
+
+.c--green {
+  color: #23b574;
+}
+
+.c--purple {
+  color: #77429c;
+}
+
+.c--pink {
+  color: #ef3588;
+}
+
+.c--orange {
+  color: #fbb03d;
+}
+
+.bg--blue {
+  background-color: #29aae3;
+}
+
+.bg--green {
+  background-color: #23b574;
+}
+
+.bg--purple {
+  background-color: #77429c;
+}
+
+.bg--pink {
+  background-color: #ef3588;
+}
+
+.bg--orange {
+  background-color: #fbb03d;
 }
 
 body {
   background-image: url("/gm-static/images/pattern-007.png");
 }
 
-.container-main {
+.container__main {
   max-width: 66.375rem;
   margin: 0 auto;
   background: white;
 }
 
 @media (min-width: 1060px) {
-  .container-main {
+  .container__main {
     border-right: 1px solid #dde2e6;
     border-left: 1px solid #dde2e6;
   }
+}
+
+.container__main__content {
+  padding: 2.3rem 3.15rem 3.5rem;
 }
 
 .header {
@@ -603,8 +647,8 @@ body {
 
 .nav__list__item--collapse.nav__list__item--active::after {
   position: absolute;
-  right: -0.35em;
-  bottom: -0.25em;
+  right: -4px;
+  bottom: -4px;
   content: "";
   border-left: 0.6em solid transparent;
   border-right: 0.6em solid transparent;
@@ -640,7 +684,7 @@ body {
 
 .header__container {
   display: none;
-  margin: 0px 1.5rem 1.5rem;
+  margin: 0 1.5rem;
   color: #5e6f80;
 }
 
@@ -688,7 +732,6 @@ body {
 .header__container__list__item {
   float: left;
   width: 33.333333333%;
-  padding-left: 11.4%;
   border-right: 1px solid #dde2e6;
   border-bottom: 1px solid #dde2e6;
   color: #5e6f80;
@@ -700,12 +743,11 @@ body {
 }
 
 .header__container__list__item__link {
+  display: block;
+  width: 100%;
+  padding-left: 31.5%;
   color: inherit;
   text-decoration: none;
-  /* For each color in the map, create an own class */
-  /* The $colors is declared on variables.sass */
-  /* For each color in the map, create an own class */
-  /* The $colors is declared on variables.sass */
 }
 
 .header__container__list__item__link.c--blue:hover {
@@ -760,9 +802,13 @@ body {
   border-radius: .09em;
 }
 
+.header__container__list__item__link:hover {
+  color: #333c45;
+}
+
 .header__container__search {
   font-size: 1.1rem;
-  font-weight: 200;
+  font-weight: 100;
   font-family: "roboto_condensed";
   height: 3em;
 }
@@ -814,4 +860,96 @@ body {
 .header__container__search__submit:hover {
   outline: 0;
   background-color: #1fa066;
+}
+
+.hero {
+  position: relative;
+  border-top: 1px solid #dde2e6;
+  border-bottom: 1px solid #dde2e6;
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #dde2e6;
+}
+
+.hero::before {
+  top: -.4rem;
+}
+
+.hero::after {
+  bottom: -.4rem;
+}
+
+.hero_content {
+  *zoom: 1;
+}
+
+.hero_content:before,
+.hero_content:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.hero_content:after {
+  clear: both;
+}
+
+.hero_content__container {
+  padding: 3.3rem 0;
+  float: left;
+  width: 50%;
+  color: #5e6f80;
+  font-size: 1.5rem;
+  font-weight: 100;
+  font-family: "catamaran";
+  font-size: 1.5rem;
+  font-weight: inherit;
+  line-height: 1.8rem;
+  text-align: center;
+}
+
+.hero_content__container:first-child {
+  border-right: 1px solid #dde2e6;
+}
+
+.hero_content__container__icons-list {
+  margin: 0 0 0.6em;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.75);
+  list-style: none;
+  font-size: 1.35rem;
+}
+
+.hero_content__container__icons-list__item {
+  width: 3.45em;
+  display: inline-block;
+  margin-right: .7em;
+  padding-bottom: .25em;
+  line-height: 1.25em;
+  border-radius: .185em;
+}
+
+.hero_content__container__icons-list__item:last-child {
+  margin-right: 0;
+}
+
+.hero_content__container__slogan__logo {
+  font-size: 3.8rem;
+  font-weight: 600;
+  line-height: 1.7rem;
+  margin-bottom: 0.33em;
+}
+
+.hero_content__container__slogan__title,
+.hero_content__container__icons__title {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
 }

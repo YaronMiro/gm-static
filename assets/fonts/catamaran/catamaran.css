@@ -7,7 +7,7 @@
   url('catamaran-thin-webfont.woff') format('woff'),
   url('catamaran-thin-webfont.ttf') format('truetype'),
   url('catamaran-thin-webfont.svg#catamaranthin') format('svg');
-  font-weight: 200;/*(thin)*/
+  font-weight: 100;/*(thin)*/
   font-style: normal;
 }
 
