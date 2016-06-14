@@ -1,3 +1,5 @@
+/* Colors map called $colors */
+
 * {
   box-sizing: border-box;
 }
@@ -580,33 +582,33 @@ body {
   color: #23b574;
 }
 
-.nav__list__item--dropdown {
+.nav__list__item--collapse {
   padding-right: 1em;
 }
 
-.nav__list__item--dropdown::before {
+.nav__list__item--collapse::before {
   content: "";
   position: absolute;
   top: 1.4em;
   right: 0;
-  width: 0.5em;
+  width: 0.6em;
   height: .4em;
   background: url("/gm-static/images/elements/dropdown-arrow.svg") no-repeat;
   opacity: 0.8;
 }
 
-.nav__list__item--dropdown.nav__list__item--active:hover {
+.nav__list__item--collapse.nav__list__item--active:hover {
   color: #23b574;
 }
 
-.nav__list__item--dropdown.nav__list__item--active::after {
+.nav__list__item--collapse.nav__list__item--active::after {
   position: absolute;
-  right: -0.25em;
-  bottom: -0.2em;
+  right: -0.35em;
+  bottom: -0.25em;
   content: "";
-  border-left: 0.5em solid transparent;
-  border-right: 0.5em solid transparent;
-  border-bottom: 0.5em solid #fff;
+  border-left: 0.6em solid transparent;
+  border-right: 0.6em solid transparent;
+  border-bottom: 0.6em solid #fff;
 }
 
 .nav__list__item__link {
@@ -700,6 +702,28 @@ body {
 .header__container__list__item__link {
   color: inherit;
   text-decoration: none;
+  /* For each color in the map, create an own class */
+  /* The $colors is declared on variables.sass */
+}
+
+.header__container__list__item__link.--blue::before {
+  background-color: #29aae3;
+}
+
+.header__container__list__item__link.--green::before {
+  background-color: #23b574;
+}
+
+.header__container__list__item__link.--purple::before {
+  background-color: #77429c;
+}
+
+.header__container__list__item__link.--pink::before {
+  background-color: #ef3588;
+}
+
+.header__container__list__item__link.--orange::before {
+  background-color: #fbb03d;
 }
 
 .header__container__list__item__link::before {
@@ -707,7 +731,7 @@ body {
   width: 0.45em;
   height: 0.45em;
   margin-right: .4em;
-  background-color: #333c45;
+  background-color: #5e6f80;
   display: inline-block;
   vertical-align: middle;
   margin-top: -0.23em;
