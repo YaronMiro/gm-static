@@ -642,7 +642,6 @@ body {
 #header__container__tips::after {
   position: absolute;
   top: -0.5em;
-  content: "";
   border-left: 0.6em solid transparent;
   border-right: 0.6em solid transparent;
   border-bottom: 0.6em solid #fff;
@@ -686,7 +685,7 @@ body {
 .header__container__list__item {
   float: left;
   width: 33.333333333%;
-  text-align: center;
+  padding-left: 11.4%;
   border-right: 1px solid #dde2e6;
   border-bottom: 1px solid #dde2e6;
   color: #5e6f80;
@@ -700,6 +699,18 @@ body {
 .header__container__list__item__link {
   color: inherit;
   text-decoration: none;
+}
+
+.header__container__list__item__link::before {
+  content: "";
+  width: 0.45em;
+  height: 0.45em;
+  margin-right: .4em;
+  background-color: #333c45;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -0.23em;
+  border-radius: .09em;
 }
 
 .header__container__search {
