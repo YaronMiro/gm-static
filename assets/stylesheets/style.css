@@ -706,23 +706,23 @@ body {
   /* The $colors is declared on variables.sass */
 }
 
-.header__container__list__item__link.--blue::before {
+.header__container__list__item__link.c--blue::before {
   background-color: #29aae3;
 }
 
-.header__container__list__item__link.--green::before {
+.header__container__list__item__link.c--green::before {
   background-color: #23b574;
 }
 
-.header__container__list__item__link.--purple::before {
+.header__container__list__item__link.c--purple::before {
   background-color: #77429c;
 }
 
-.header__container__list__item__link.--pink::before {
+.header__container__list__item__link.c--pink::before {
   background-color: #ef3588;
 }
 
-.header__container__list__item__link.--orange::before {
+.header__container__list__item__link.c--orange::before {
   background-color: #fbb03d;
 }
 
