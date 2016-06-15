@@ -918,17 +918,33 @@ body {
 }
 
 .hero_content__container {
-  padding: 3.3rem 0;
+  padding: 3.3rem 1rem;
   float: left;
   width: 50%;
   color: #5e6f80;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 100;
   font-family: "catamaran";
-  font-size: 1.55rem;
-  font-weight: inherit;
   line-height: 1.8rem;
   text-align: center;
+}
+
+@media (min-width: 850px) {
+  .hero_content__container {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero_content__container {
+    font-size: 1.45rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero_content__container {
+    font-size: 1.55rem;
+  }
 }
 
 .hero_content__container:last-child {
@@ -940,7 +956,7 @@ body {
   padding: 0;
   color: rgba(255, 255, 255, 0.75);
   list-style: none;
-  font-size: 1.35rem;
+  font-size: 0.87em;
 }
 
 .hero_content__container__icons-list__item {
