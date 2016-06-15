@@ -916,26 +916,25 @@ body {
 }
 
 .hero_content__container {
-  padding: 3.3rem 1rem;
+  padding: 3rem 0;
   float: left;
   width: 50%;
   color: #5e6f80;
-  font-size: 1.25rem;
+  font-size: 1.32rem;
   font-weight: 100;
   font-family: "catamaran";
   line-height: 1.8rem;
-  text-align: center;
 }
 
 @media (min-width: 850px) {
   .hero_content__container {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
   }
 }
 
 @media (min-width: 900px) {
   .hero_content__container {
-    font-size: 1.45rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -949,29 +948,79 @@ body {
   border-left: 1px solid #dde2e6;
 }
 
+.hero_content__container__icons {
+  padding-right: 1.3em;
+  text-align: right;
+}
+
+@media (min-width: 850px) {
+  .hero_content__container__icons {
+    padding-right: 1.25em;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero_content__container__icons {
+    padding-right: 1.8em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero_content__container__icons {
+    padding-right: 2.5em;
+  }
+}
+
+.hero_content__container__slogan {
+  padding-left: 1.3em;
+  text-align: left;
+}
+
+@media (min-width: 850px) {
+  .hero_content__container__slogan {
+    padding-left: 1.25em;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero_content__container__slogan {
+    padding-left: 1.8em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero_content__container__slogan {
+    padding-left: 2.5em;
+  }
+}
+
 .hero_content__container__icons-list {
+  display: inline-block;
   margin: 0 0 .8em;
   padding: 0;
   color: rgba(255, 255, 255, 0.75);
   list-style: none;
-  font-size: 0.87em;
+  font-size: 0.855em;
 }
 
 .hero_content__container__icons-list__item {
-  width: 3.45em;
+  width: 3.55em;
   display: inline-block;
   margin-right: .7em;
   padding-bottom: .25em;
   line-height: 1.25em;
+  text-align: center;
   border-radius: .185em;
 }
 
 .hero_content__container__icons-list__item:last-child {
+  padding-left: .05em;
   margin-right: 0;
 }
 
 .hero_content__container__slogan__logo {
   display: inline-block;
+  margin: 0 0 .065em 4.85em;
   width: 4em;
   height: 1.88em;
   background-image: url("/gm-static/images/elements/logo.svg");
@@ -981,7 +1030,8 @@ body {
 
 .hero_content__container__slogan__title,
 .hero_content__container__icons__title {
+  display: inline-block;
+  margin: 0;
   font-size: inherit;
   font-weight: inherit;
-  margin: 0;
 }
