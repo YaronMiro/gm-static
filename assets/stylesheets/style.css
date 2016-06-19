@@ -982,12 +982,12 @@ body {
 }
 
 .hero__content__container__icons {
-  padding-right: 1.3em;
-  text-align: right;
+  text-align: center;
 }
 
-@media (min-width: 850px) {
+@media (min-width: 790px) {
   .hero__content__container__icons {
+    text-align: right;
     padding-right: 1.25em;
   }
 }
@@ -1001,29 +1001,6 @@ body {
 @media (min-width: 1000px) {
   .hero__content__container__icons {
     padding-right: 2.5em;
-  }
-}
-
-.hero__content__container__slogan {
-  padding-left: 1.3em;
-  text-align: left;
-}
-
-@media (min-width: 850px) {
-  .hero__content__container__slogan {
-    padding-left: 1.25em;
-  }
-}
-
-@media (min-width: 900px) {
-  .hero__content__container__slogan {
-    padding-left: 1.8em;
-  }
-}
-
-@media (min-width: 1000px) {
-  .hero__content__container__slogan {
-    padding-left: 2.5em;
   }
 }
 
@@ -1057,14 +1034,49 @@ body {
   margin-right: 0;
 }
 
+.hero__content__container__slogan {
+  text-align: center;
+}
+
+@media (min-width: 790px) {
+  .hero__content__container__slogan {
+    padding-left: 1.3em;
+    text-align: left;
+  }
+}
+
+@media (min-width: 850px) {
+  .hero__content__container__slogan {
+    padding-left: 1.25em;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero__content__container__slogan {
+    padding-left: 1.8em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero__content__container__slogan {
+    padding-left: 2.5em;
+  }
+}
+
 .hero__content__container__slogan__logo {
-  display: inline-block;
-  margin: 0 0 .065em 4.85em;
+  margin: 0 auto;
   width: 4em;
   height: 1.88em;
   background-image: url("/gm-static/images/elements/logo.svg");
   background-repeat: no-repeat;
   background-size: 3.9em;
+}
+
+@media (min-width: 790px) {
+  .hero__content__container__slogan__logo {
+    display: inline-block;
+    margin: 0 0 .065em 4.85em;
+  }
 }
 
 .hero__content__container__slogan__title,
