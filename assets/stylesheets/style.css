@@ -1020,9 +1020,9 @@ body {
 }
 
 .hero__content__container__icons-list__item {
-  width: 3.55em;
+  width: 4.85em;
   display: inline-block;
-  margin-right: .7em;
+  margin: 0 auto .4em;
   padding-bottom: .25em;
   line-height: 1.25em;
   text-align: center;
@@ -1031,7 +1031,23 @@ body {
 
 .hero__content__container__icons-list__item:last-child {
   padding-left: .05em;
-  margin-right: 0;
+}
+
+@media (min-width: 380px) {
+  .hero__content__container__icons-list__item {
+    width: 6.15em;
+  }
+}
+
+@media (min-width: 480px) {
+  .hero__content__container__icons-list__item {
+    width: 3.55em;
+    margin: 0 .7em .0 0;
+  }
+
+  .hero__content__container__icons-list__item:last-child {
+    margin-right: 0;
+  }
 }
 
 .hero__content__container__slogan {
