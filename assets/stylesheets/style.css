@@ -1030,7 +1030,6 @@ body {
 }
 
 .hero__content__container__icons-list {
-  display: inline-block;
   margin: 0 0 -.15em 0;
   padding: 0;
   color: rgba(255, 255, 255, 0.75);
