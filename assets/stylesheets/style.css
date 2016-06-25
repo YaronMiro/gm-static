@@ -969,6 +969,7 @@ body {
 }
 
 .hero__content__container {
+  text-align: center;
   padding: 3rem 0;
   color: #5e6f80;
   font-family: "catamaran";
@@ -1028,29 +1029,6 @@ body {
   }
 }
 
-.hero__content__container__icons {
-  text-align: center;
-}
-
-@media (min-width: 790px) {
-  .hero__content__container__icons {
-    text-align: right;
-    padding-right: 1.25em;
-  }
-}
-
-@media (min-width: 900px) {
-  .hero__content__container__icons {
-    padding-right: 1.8em;
-  }
-}
-
-@media (min-width: 1000px) {
-  .hero__content__container__icons {
-    padding-right: 2.5em;
-  }
-}
-
 .hero__content__container__icons-list {
   display: inline-block;
   margin: 0 0 .3em;
@@ -1097,35 +1075,6 @@ body {
   }
 }
 
-.hero__content__container__slogan {
-  text-align: center;
-}
-
-@media (min-width: 790px) {
-  .hero__content__container__slogan {
-    padding-left: 1.3em;
-    text-align: left;
-  }
-}
-
-@media (min-width: 850px) {
-  .hero__content__container__slogan {
-    padding-left: 1.25em;
-  }
-}
-
-@media (min-width: 900px) {
-  .hero__content__container__slogan {
-    padding-left: 1.8em;
-  }
-}
-
-@media (min-width: 1000px) {
-  .hero__content__container__slogan {
-    padding-left: 2.5em;
-  }
-}
-
 .hero__content__container__slogan__logo {
   margin: 0 auto;
   width: 4em;
@@ -1137,8 +1086,7 @@ body {
 
 @media (min-width: 790px) {
   .hero__content__container__slogan__logo {
-    display: inline-block;
-    margin: 0 0 .065em 4.85em;
+    margin-bottom: .145em;
   }
 }
 
