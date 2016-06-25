@@ -1017,12 +1017,6 @@ body {
   }
 }
 
-@media (min-width: 900px) {
-  .hero__content__container {
-    font-size: 1.5rem;
-  }
-}
-
 @media (min-width: 1000px) {
   .hero__content__container {
     font-size: 1.55rem;
@@ -1045,7 +1039,7 @@ body {
 
 @media (min-width: 790px) {
   .hero__content__container__icons-list {
-    margin: .3em 0 .55em;
+    margin: .6em 0 .15em;
   }
 }
 
@@ -1072,7 +1066,7 @@ body {
 @media (min-width: 480px) {
   .hero__content__container__icons-list__item {
     width: 3.55em;
-    margin: 0 .35em .0 0;
+    margin: 0 .35em 0 0;
   }
 
   .hero__content__container__icons-list__item:last-child {
