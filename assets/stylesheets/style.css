@@ -482,6 +482,7 @@ body {
 }
 
 .container__main {
+  position: relative;
   max-width: 66.375rem;
   margin: 0 auto;
   background: white;
@@ -528,12 +529,6 @@ body {
   color: rgba(255, 255, 255, 0.75);
 }
 
-.nav__narrow__menu__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 .nav__narrow__menu {
   visibility: hidden;
   opacity: 0;
@@ -559,10 +554,27 @@ body {
   opacity: 1;
 }
 
+@media (min-width: 850px) {
+  .nav__narrow__menu.visible {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.nav__narrow__menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .nav__narrow__menu__list__item {
   position: relative;
   padding: .3rem .3rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav__narrow__menu__list__item:last-child {
+  border-bottom: 0;
 }
 
 .nav__narrow__menu__list__item__link {
