@@ -43,18 +43,18 @@ function collapse() {
     var $target = $(targetId);
 
     // In case we want to deactivate an "active" collapse.
-    if ($target.is(":visible")) {
-      $(triggerElement).removeClass('nav__list__item--active');
-      $target.removeClass('header__container--visible');
+    if ($target.hasClass('visible')) {
+      $(triggerElement).removeClass('active');
+      $target.removeClass('visible');
     }
     else {
       // Hide any other "active" collapse.
-      $('.header__container--visible').removeClass('header__container--visible');
-      $('.nav__list__item--active').removeClass('nav__list__item--active');
+      $('.visible').removeClass('visible');
+      $('.active').removeClass('active');
 
       // "activate" the target collapse.
-      $($target).addClass('header__container--visible');
-      $(triggerElement).addClass('nav__list__item--active');
+      $($target).addClass('visible');
+      $(triggerElement).addClass('active');
 
     }
   })
