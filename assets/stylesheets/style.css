@@ -695,12 +695,6 @@ body {
   outline: 0;
 }
 
-@media (min-width: 420px) {
-  .nav__narrow__menu__back__button {
-    float: left;
-  }
-}
-
 .nav__narrow__menu__back__button:hover {
   color: #23b574;
 }
@@ -719,17 +713,11 @@ body {
 }
 
 .nav__narrow__menu__title {
-  margin: 0 0 .2em;
+  margin: .5em 0 0;
   color: #23b574;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: normal;
   font-weight: 400;
-}
-
-@media (min-width: 420px) {
-  .nav__narrow__menu__title {
-    float: right;
-  }
 }
 
 .nav__narrow__menu__close--icon {
