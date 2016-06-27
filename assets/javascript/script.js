@@ -33,7 +33,7 @@ function testBrowser() {
  */
 function collapse() {
 // Get the target element ID.
-  $( '[data-collapse-target]').click(function(event) {
+  $('[data-collapse-target]').click(function(event) {
 
     // The "trigger" element that was selected.
     var triggerElement = event.target;
@@ -43,25 +43,49 @@ function collapse() {
     var $target = $(targetId);
 
     // In case we want to deactivate an "active" collapse.
-    if ($target.hasClass('visible')) {
-      $(triggerElement).removeClass('active');
-      $target.removeClass('visible');
+    if ($target.hasClass('collapse-visible')) {
+      $(triggerElement).removeClass('collapse-active');
+      $target.removeClass('collapse-visible');
     }
     else {
       // Hide any other "active" collapse.
-      $('.visible').removeClass('visible');
-      $('.active').removeClass('active');
+      $('.collapse-visible').removeClass('collapse-visible');
+      $('.collapse-active').removeClass('collapse-active');
 
       // "activate" the target collapse.
-      $($target).addClass('visible');
-      $(triggerElement).addClass('active');
+      $($target).addClass('collapse-visible');
+      $(triggerElement).addClass('collapse-active');
 
     }
   })
 }
 
+/**
+ * Adding the capability to hide/show narrow nav menus.
+ *
+ */
+function navNarrowMenuDisplay() {
+// Get the target element ID.
+  $('[data-show-target]').click(function(event) {
+
+    // The "trigger" element that was selected.
+    var triggerElement = event.target;
+
+    // The target menu to "show".
+    var targetId = $(triggerElement).data('showTarget');
+    var $target = $(targetId);
+
+    // Hide any other "visible" menu.
+    $('.narrow__nav__visible').removeClass('narrow__nav__visible');
+
+    // "show" the target menu.
+    $($target).addClass('narrow__nav__visible');
+  })
+}
+
 testBrowser();
 collapse();
+navNarrowMenuDisplay();
 
 $(function () {
 
