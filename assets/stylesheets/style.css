@@ -721,9 +721,10 @@ body {
   *zoom: 1;
   margin: 1em 0 0;
   color: #23b574;
-  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.45rem;
   line-height: normal;
-  font-weight: 400;
+  font-weight: 100;
 }
 
 .nav__narrow__menu__title:before,
@@ -735,6 +736,10 @@ body {
 
 .nav__narrow__menu__title:after {
   clear: both;
+}
+
+.nav__narrow__menu__title__breadcrumb {
+  color: #23b574;
 }
 
 .nav__narrow__menu__close--icon {
