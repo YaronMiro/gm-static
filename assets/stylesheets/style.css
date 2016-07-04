@@ -1408,7 +1408,7 @@ body {
   background-size: auto 100%;
   background-image: url("/gm-static/images/pages/about/about-short-large.jpg");
   background-repeat: no-repeat;
-  background-position: left top;
+  background-position: left bottom;
 }
 
 @media (min-width: 730px) {
@@ -1418,10 +1418,18 @@ body {
 }
 
 .about__page__img__container {
-  margin-left: 52.8vw;
-  padding-top: 7rem;
+  margin-left: 45.8vw;
+  padding-top: 5rem;
   width: 15rem;
-  font-size: 1.25em;
+  font-size: .9em;
+}
+
+@media (min-width: 730px) {
+  .about__page__img__container {
+    margin-left: 52.8vw;
+    padding-top: 7.5rem;
+    font-size: 1.18em;
+  }
 }
 
 @media (min-width: 1060px) {
@@ -1459,7 +1467,7 @@ body {
   color: #333c45;
 }
 
-@media (min-width: 620px) {
+@media (min-width: 550px) {
   .about__page__img__title {
     display: block;
   }
