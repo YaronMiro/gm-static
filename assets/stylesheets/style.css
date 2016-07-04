@@ -1403,74 +1403,60 @@ body {
 }
 
 .about__page__img {
-  position: relative;
   margin-bottom: 4rem;
-  height: 15rem;
+  height: 28rem;
   background-size: auto 100%;
   background-image: url("/gm-static/images/pages/about/about-large.jpg");
   background-repeat: no-repeat;
   background-position: left top;
 }
 
-@media (min-width: 520px) {
-  .about__page__img {
-    height: 22rem;
-  }
-}
-
-@media (min-width: 920px) {
-  .about__page__img {
-    height: 28rem;
-  }
-}
-
 .about__page__img__container {
-  position: absolute;
-  top: 11.4em;
-  left: 21.5em;
+  margin-left: 53.4vw;
+  padding-top: 11.4rem;
+  width: 15rem;
+  font-size: 1.25em;
 }
 
-@media (min-width: 920px) {
+@media (min-width: 1060px) {
   .about__page__img__container {
-    top: 15em;
-    left: 27.5em;
+    margin-left: 35.3rem;
   }
 }
 
 .about__page__img__icons-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 1.4em;
-}
-
-.about__page__img__icons-list__item {
-  float: left;
-  width: 7.2em;
-  padding-bottom: .25em;
-  border: 1px solid;
-  border-radius: .185em;
-  line-height: 1.25em;
+  color: rgba(255, 255, 255, 0.5);
   text-align: center;
 }
 
-.about__page__img__icons-list__item:first-child,
-.about__page__img__icons-list__item:nth-child(2) {
-  margin-bottom: .5em;
+.about__page__img__icons-list__item {
+  display: block;
+  margin: 0 auto .55em;
+  padding-bottom: .25em;
+  border-radius: .185em;
+  width: 6rem;
+  line-height: 1.25em;
+  text-align: center;
+  background: #333c45;
 }
 
-.about__page__img__icons-list__item:first-child,
-.about__page__img__icons-list__item:nth-child(3) {
-  margin-right: .8em;
+.about__page__img__icons-list__item:last-child {
+  margin-bottom: .3em;
 }
 
 .about__page__img__title {
-  position: absolute;
+  display: none;
   margin: 0;
-  font-size: 1.45em;
+  font-size: 1em;
   font-weight: 100;
-  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  color: #333c45;
+}
+
+@media (min-width: 620px) {
+  .about__page__img__title {
+    display: block;
+  }
 }
 
 .about__page__section {
