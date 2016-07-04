@@ -1404,23 +1404,29 @@ body {
 
 .about__page__img {
   margin-bottom: 4rem;
-  height: 28rem;
+  height: 16rem;
   background-size: auto 100%;
-  background-image: url("/gm-static/images/pages/about/about-large.jpg");
+  background-image: url("/gm-static/images/pages/about/about-short-large.jpg");
   background-repeat: no-repeat;
   background-position: left top;
 }
 
+@media (min-width: 730px) {
+  .about__page__img {
+    height: 22rem;
+  }
+}
+
 .about__page__img__container {
-  margin-left: 53.4vw;
-  padding-top: 11.4rem;
+  margin-left: 52.8vw;
+  padding-top: 7rem;
   width: 15rem;
   font-size: 1.25em;
 }
 
 @media (min-width: 1060px) {
   .about__page__img__container {
-    margin-left: 35.3rem;
+    margin-left: 34.6rem;
   }
 }
 
