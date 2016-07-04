@@ -1437,7 +1437,7 @@ body {
   }
 }
 
-@media (min-width: 420px) {
+@media (min-width: 425px) {
   .about__page__img__container {
     width: 9rem;
     margin-left: 54vw;
@@ -1461,7 +1461,7 @@ body {
 
 @media (min-width: 730px) {
   .about__page__img__container {
-    margin-left: 52.8vw;
+    margin-left: 53.2vw;
     padding-top: 7.5rem;
     width: 15rem;
     font-size: 1.18em;
@@ -1515,7 +1515,7 @@ body {
   color: #333c45;
 }
 
-@media (min-width: 420px) {
+@media (min-width: 425px) {
   .about__page__img__title {
     display: block;
   }
