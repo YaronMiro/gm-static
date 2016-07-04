@@ -1404,16 +1404,22 @@ body {
 
 .about__page__img {
   margin-bottom: 4rem;
-  height: 13rem;
+  height: 12rem;
   background-size: auto 100%;
-  background-image: url("/gm-static/images/pages/about/about-short-large.jpg");
+  background-image: url("/gm-static/images/pages/about/about.jpg");
   background-repeat: no-repeat;
   background-position: left bottom;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 580px) {
   .about__page__img {
-    height: 16rem;
+    height: 15rem;
+  }
+}
+
+@media (min-width: 660px) {
+  .about__page__img {
+    height: 18rem;
   }
 }
 
@@ -1425,7 +1431,7 @@ body {
 
 .about__page__img__container {
   display: none;
-  margin-left: 66vw;
+  margin-left: 60.7vw;
   padding-top: 3.4rem;
   width: 4rem;
   font-size: .8em;
@@ -1437,33 +1443,43 @@ body {
   }
 }
 
-@media (min-width: 425px) {
+@media (min-width: 450px) {
   .about__page__img__container {
-    width: 9rem;
-    margin-left: 54vw;
+    margin-left: 49.1vw;
+    padding-top: 2.3rem;
+    width: 10rem;
   }
 }
 
 @media (min-width: 520px) {
   .about__page__img__container {
-    margin-left: 48.5vw;
+    margin-left: 42.4vw;
+    width: 10.8rem;
   }
 }
 
-@media (min-width: 550px) {
+@media (min-width: 580px) {
   .about__page__img__container {
-    margin-left: 45.8vw;
-    padding-top: 5rem;
-    width: 14rem;
+    margin-left: 46.4vw;
+    padding-top: 3.9rem;
+    width: 11.9rem;
     font-size: .93em;
+  }
+}
+
+@media (min-width: 660px) {
+  .about__page__img__container {
+    margin-left: 50.9vw;
+    padding-top: 5.8rem;
+    font-size: 1em;
   }
 }
 
 @media (min-width: 730px) {
   .about__page__img__container {
-    margin-left: 53.2vw;
+    margin-left: 53.1vw;
     padding-top: 7.5rem;
-    width: 15rem;
+    width: 14rem;
     font-size: 1.18em;
   }
 }
@@ -1481,10 +1497,9 @@ body {
 
 .about__page__img__icons-list__item {
   display: block;
-  margin: 0 auto .55em;
+  margin-bottom: .55em;
   padding-bottom: .25em;
   border-radius: .185em;
-  width: 3.5rem;
   line-height: 1.25em;
   text-align: center;
   background: #333c45;
@@ -1494,7 +1509,14 @@ body {
   margin-bottom: .3em;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 425px) {
+  .about__page__img__icons-list__item {
+    margin: 0 auto .55em;
+    width: 4rem;
+  }
+}
+
+@media (min-width: 580px) {
   .about__page__img__icons-list__item {
     width: 5rem;
   }
@@ -1509,15 +1531,21 @@ body {
 .about__page__img__title {
   display: none;
   margin: 0;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 100;
   text-align: center;
   color: #333c45;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 450px) {
   .about__page__img__title {
     display: block;
+  }
+}
+
+@media (min-width: 730px) {
+  .about__page__img__title {
+    font-size: 1em;
   }
 }
 
