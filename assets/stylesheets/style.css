@@ -600,9 +600,12 @@ body {
 .nav__narrow__menu__list {
   clear: both;
   *zoom: 1;
-  margin: .5rem 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 0;
+  border-radius: 0 0 3px 3px;
 }
 
 .nav__narrow__menu__list:before,
@@ -618,7 +621,7 @@ body {
 
 .nav__narrow__menu__list__item {
   position: relative;
-  padding: .3rem .3rem 0.5rem;
+  padding: .3rem .9rem 0.5rem;
   line-height: 3em;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -630,9 +633,14 @@ body {
 .nav__narrow__menu__list__item__link {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
-.nav__narrow__menu__list__item__link::before {
+.nav__narrow__menu__list__item__link:hover {
+  color: #23b574;
+}
+
+.nav__narrow__menu__list__item__link--box::before {
   content: "";
   width: .5em;
   height: .5em;
@@ -642,10 +650,6 @@ body {
   vertical-align: middle;
   margin-top: -.23em;
   border-radius: .1em;
-}
-
-.nav__narrow__menu__list__item__link:hover {
-  color: #23b574;
 }
 
 .nav__narrow__menu__list__item__link--box-color.c--blue::before {
@@ -736,6 +740,10 @@ body {
   clear: both;
   *zoom: 1;
   margin: 1em 0 0;
+  padding: .9em .6em;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 3px 3px 0 0;
+  background: rgba(255, 255, 255, 0.06);
   font-size: 1.2rem;
   line-height: normal;
   font-weight: 100;
