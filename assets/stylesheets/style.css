@@ -1445,9 +1445,9 @@ body {
 
 @media (min-width: 450px) {
   .about__page__img__container {
-    margin-left: 49.1vw;
+    margin-left: 49.7vw;
     padding-top: 2.3rem;
-    width: 10rem;
+    width: 10.5rem;
   }
 }
 
@@ -1460,16 +1460,16 @@ body {
 
 @media (min-width: 580px) {
   .about__page__img__container {
-    margin-left: 46.4vw;
+    margin-left: 45.6vw;
     padding-top: 3.9rem;
-    width: 11.9rem;
+    width: 13.3rem;
     font-size: .93em;
   }
 }
 
 @media (min-width: 660px) {
   .about__page__img__container {
-    margin-left: 50.9vw;
+    margin-left: 50vw;
     padding-top: 5.8rem;
     font-size: 1em;
   }
@@ -1477,7 +1477,7 @@ body {
 
 @media (min-width: 730px) {
   .about__page__img__container {
-    margin-left: 53.1vw;
+    margin-left: 54.3vw;
     padding-top: 7.5rem;
     width: 14rem;
     font-size: 1.18em;
@@ -1555,6 +1555,59 @@ body {
 
 .about__page__section p {
   margin-top: .7rem;
+}
+
+.about__page__section--line-through {
+  position: relative;
+  margin-bottom: 0;
+  padding-bottom: 5rem;
+  font-size: 1rem;
+}
+
+.about__page__section--line-through::before {
+  z-index: 1;
+  position: absolute;
+  content: "";
+  top: 1.3em;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #dde2e6;
+}
+
+.about__page__section_link {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: .25em;
+  width: 8em;
+  text-decoration: none;
+  border-radius: .185em;
+  line-height: 2.25em;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  background: #23b574;
+}
+
+.about__page__section_link:hover {
+  background: #1fa066;
+}
+
+.about__page__section_link_text {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: .25em;
+  width: 8rem;
+  text-decoration: none;
+  border-radius: .185em;
+  font-size: 1rem;
+  line-height: 2.25em;
+  text-align: center;
+  color: #dde2e6;
+  background: #23b574;
 }
 
 .about__page__title {
