@@ -570,8 +570,7 @@ body {
   opacity: 0;
   z-index: 2;
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 2.5rem;
   right: 0;
   left: 0;
   padding: 1.2rem 3rem 3rem;
