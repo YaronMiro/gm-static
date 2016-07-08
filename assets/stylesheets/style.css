@@ -566,14 +566,15 @@ body {
 }
 
 .nav__narrow__menu {
+  position: relative;
   visibility: hidden;
   opacity: 0;
   z-index: 2;
   position: absolute;
-  top: 2.5rem;
+  top: 0;
   right: 0;
   left: 0;
-  padding: 1.2rem 3rem 3rem;
+  padding: 1.2rem 3rem 3.5rem;
   color: inherit;
   background-color: #333c45;
   -webkit-transition-property: visibility, opacity;
@@ -582,6 +583,16 @@ body {
   transition-duration: .15s;
   -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
+}
+
+.nav__narrow__menu::after {
+  content: "";
+  position: absolute;
+  bottom: -0.4em;
+  left: 0;
+  right: 0;
+  height: .4em;
+  background: #23b574;
 }
 
 .nav__narrow__menu.collapse-visible {
@@ -602,7 +613,6 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  border: 1px solid rgba(255, 255, 255, 0.15);
   border-top: 0;
   border-radius: 0 0 3px 3px;
 }
@@ -707,9 +717,9 @@ body {
   color: inherit;
   position: relative;
   float: right;
-  margin-bottom: 1.4em;
+  margin-bottom: 2em;
   padding-left: 1em;
-  color: inherit;
+  color: #23b574;
   font-size: 1.3rem;
   line-height: normal;
 }
@@ -719,7 +729,7 @@ body {
 }
 
 .nav__narrow__menu__back__button:hover {
-  color: #23b574;
+  color: #dde2e6;
 }
 
 .nav__narrow__menu__back__button:before {
@@ -738,11 +748,9 @@ body {
 .nav__narrow__menu__title {
   clear: both;
   *zoom: 1;
-  margin: 1em 0 0;
-  padding: .9em .6em;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 3px 3px 0 0;
-  background: rgba(255, 255, 255, 0.06);
+  margin: 0 0 1em;
+  padding: .2em .6em .4em;
+  background: rgba(255, 255, 255, 0.05);
   font-size: 1.2rem;
   line-height: normal;
   font-weight: 100;
@@ -1410,7 +1418,7 @@ body {
 }
 
 .about__page__img {
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
   height: 12rem;
   background-size: auto 100%;
   background-image: url("/gm-static/images/pages/about/about.jpg");
@@ -1432,6 +1440,7 @@ body {
 
 @media (min-width: 730px) {
   .about__page__img {
+    margin-bottom: 4rem;
     height: 22rem;
   }
 }
@@ -1452,7 +1461,7 @@ body {
 
 @media (min-width: 450px) {
   .about__page__img__container {
-    margin-left: 49.7vw;
+    margin-left: 48vw;
     padding-top: 2.3rem;
     width: 10.5rem;
   }
@@ -1467,16 +1476,16 @@ body {
 
 @media (min-width: 580px) {
   .about__page__img__container {
-    margin-left: 45.6vw;
+    margin-left: 45.9vw;
     padding-top: 3.9rem;
-    width: 13.3rem;
+    width: 12.2rem;
     font-size: .93em;
   }
 }
 
 @media (min-width: 660px) {
   .about__page__img__container {
-    margin-left: 50vw;
+    margin-left: 49.4vw;
     padding-top: 5.8rem;
     font-size: 1em;
   }
@@ -1486,7 +1495,7 @@ body {
   .about__page__img__container {
     margin-left: 54.3vw;
     padding-top: 7.5rem;
-    width: 14rem;
+    width: 12.9rem;
     font-size: 1.18em;
   }
 }
