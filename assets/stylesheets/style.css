@@ -577,6 +577,7 @@ body {
   padding: 1.2rem 3rem 2.3rem;
   color: inherit;
   background-color: #fff;
+  box-shadow: 0 3px 82px 3px #5e6f80;
   -webkit-transition-property: visibility, opacity;
   transition-property: visibility, opacity;
   -webkit-transition-duration: .15s;
@@ -591,8 +592,8 @@ body {
   bottom: 0em;
   left: 0;
   right: 0;
-  height: .3em;
-  background: #23b574;
+  height: .2em;
+  background: #5e6f80;
 }
 
 .nav__narrow__menu.collapse-visible {
@@ -729,7 +730,7 @@ body {
 }
 
 .nav__narrow__menu__back__button:hover {
-  color: #dde2e6;
+  color: #333c45;
 }
 
 .nav__narrow__menu__back__button:before {
