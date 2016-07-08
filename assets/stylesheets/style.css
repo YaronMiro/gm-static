@@ -567,45 +567,11 @@ body {
 
 .nav__narrow__menu {
   position: relative;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  padding: 1.2rem 3rem 2.3rem;
+  padding: 1.6rem 1.7rem 1.6rem;
   color: inherit;
+  border: 1px solid #dde2e6;
+  border-top: 0;
   background-color: #fff;
-  box-shadow: 0 3px 82px 3px #5e6f80;
-  -webkit-transition-property: visibility, opacity;
-  transition-property: visibility, opacity;
-  -webkit-transition-duration: .15s;
-  transition-duration: .15s;
-  -webkit-transition-timing-function: ease-in;
-  transition-timing-function: ease-in;
-}
-
-.nav__narrow__menu::after {
-  content: "";
-  position: absolute;
-  bottom: 0em;
-  left: 0;
-  right: 0;
-  height: .2em;
-  background: #5e6f80;
-}
-
-.nav__narrow__menu.collapse-visible {
-  visibility: visible;
-  opacity: 1;
-}
-
-@media (min-width: 850px) {
-  .nav__narrow__menu.collapse-visible {
-    visibility: hidden;
-    opacity: 0;
-  }
 }
 
 .nav__narrow__menu__list {
@@ -718,9 +684,9 @@ body {
   color: inherit;
   position: relative;
   float: right;
-  margin-bottom: 2em;
+  margin-bottom: .7em;
   padding-left: 1em;
-  color: #23b574;
+  color: #5e6f80;
   font-size: 1.3rem;
   line-height: normal;
 }
@@ -730,7 +696,7 @@ body {
 }
 
 .nav__narrow__menu__back__button:hover {
-  color: #333c45;
+  color: #23b574;
 }
 
 .nav__narrow__menu__back__button:before {
@@ -809,8 +775,15 @@ body {
 }
 
 .nav__narrow__bar .nav__narrow__bar__menu__icon:hover {
-  opacity: 1;
   background-image: url("/gm-static/images/elements/menu-hover.svg");
+}
+
+.nav__narrow__bar .nav__narrow__bar__menu__icon.collapse-active {
+  background-image: url("/gm-static/images/elements/menu-close.svg");
+}
+
+.nav__narrow__bar .nav__narrow__bar__menu__icon.collapse-active:hover {
+  background-image: url("/gm-static/images/elements/menu-close-hover.svg");
 }
 
 .nav__narrow__bar .nav__narrow__bar__link {
@@ -877,6 +850,10 @@ body {
 
 .nav__list__item:last-child {
   margin-right: 0;
+}
+
+.nav__list__item--active {
+  color: #23b574;
 }
 
 .nav__list__item--icon {
@@ -984,6 +961,16 @@ body {
   #header__container__dev.collapse-visible,
   #header__container__tips.collapse-visible {
     display: block;
+  }
+}
+
+#header__container__nav__narrow__menu.collapse-visible {
+  display: block;
+}
+
+@media (min-width: 850px) {
+  #header__container__nav__narrow__menu.collapse-visible {
+    display: none;
   }
 }
 
