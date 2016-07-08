@@ -49,7 +49,7 @@ function collapse() {
 
       // Firing an event after we hide any "visible "collapse.
       $.event.trigger({
-        type: "hideCollapseEvent",
+        type: "afterHideCollapseEvent",
         triggerElement: triggerElement,
         targetId: targetId
       });
@@ -62,6 +62,13 @@ function collapse() {
       // "activate" the target collapse.
       $($target).addClass('collapse-visible');
       $(triggerElement).addClass('collapse-active');
+
+      // Firing an event after we display any "collapse.
+      $.event.trigger({
+        type: "afterShowCollapseEvent",
+        triggerElement: triggerElement,
+        targetId: targetId
+      });
 
     }
   })
@@ -94,13 +101,7 @@ function navNarrowMenuDisplay() {
  * Event listener callback when hiding the narrow menu.
  *
  */
-function navNarrowMenuHideEvent(event) {
-
-  // Return early in case we are not closing the narrow menu.
-  if (event.targetId != '#header__container__nav__narrow__menu') {
-    return;
-  }
-
+function rollBackToDeafultNarrowMenu(event) {
   // Hide any other "visible" menu.
   $('.narrow__nav__visible').removeClass('narrow__nav__visible');
 
@@ -112,7 +113,8 @@ function navNarrowMenuHideEvent(event) {
 testBrowser();
 collapse();
 navNarrowMenuDisplay();
-$(document).on("hideCollapseEvent", navNarrowMenuHideEvent);
+$(document).on("afterHideCollapseEvent", rollBackToDeafultNarrowMenu);
+$(document).on("afterShowCollapseEvent", rollBackToDeafultNarrowMenu);
 
 $(function () {
 

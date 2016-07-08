@@ -567,10 +567,11 @@ body {
 
 .nav__narrow__menu {
   position: relative;
-  padding: 1.6rem 1.7rem 1.6rem;
+  padding: 1.6rem 0 0;
   color: inherit;
   border: 1px solid #dde2e6;
   border-top: 0;
+  border-radius: 0 0 .3em .3em;
   background-color: #fff;
 }
 
@@ -597,7 +598,7 @@ body {
 
 .nav__narrow__menu__list__item {
   position: relative;
-  padding: .3rem .9rem 0.5rem;
+  padding: .3rem 1.1rem 0.5rem;
   border-bottom: 1px solid rgba(133, 149, 165, 0.2);
   color: #5e6f80;
   line-height: 3em;
@@ -685,6 +686,7 @@ body {
   position: relative;
   float: right;
   margin-bottom: .7em;
+  margin-right: .8em;
   padding-left: 1em;
   color: #5e6f80;
   font-size: 1.3rem;
