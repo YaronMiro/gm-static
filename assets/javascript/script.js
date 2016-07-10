@@ -110,11 +110,15 @@ function rollBackToDeafultNarrowMenu(event) {
   $('#nav__narrow__menu__container').addClass('narrow__nav__visible');
 }
 
-testBrowser();
-collapse();
-navNarrowMenuDisplay();
-$(document).on("afterHideCollapseEvent", rollBackToDeafultNarrowMenu);
-$(document).on("afterShowCollapseEvent", rollBackToDeafultNarrowMenu);
+
+$(document).ready(function() {
+  testBrowser();
+  collapse();
+  navNarrowMenuDisplay();
+  $(document).on("afterHideCollapseEvent", rollBackToDeafultNarrowMenu);
+  $(document).on("afterShowCollapseEvent", rollBackToDeafultNarrowMenu);
+});
+
 
 $(function () {
 
