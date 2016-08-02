@@ -1,33 +1,47 @@
 .tutorial__post__footer
   margin-top: 5em
-  padding: 1.1em 0
+  padding: 1.1em 1em
   border-top: 1px solid $mist
   border-bottom: 1px solid $mist
   color: $grey-medium
   font:
     size: 1rem
     family: $catamaran
+  text-align: center
 
+  +respond-at(1040px)
+    +clearfix()
+    padding: 1.1em 3.25em
+    text-align: left
 
 .tutorial__post__footer__wrapper
 
 
 
 .tutorial__post__footer__avatar__wrapper
-  float: left
-  width: 4.5em
+  margin: 0 auto
+  width: 3.5em
 
+  +respond-at(1040px)
+    float: left
+    margin: 0 1.5em 0 0
 
 .tutorial__post__footer__avatar
-  margin: .55em auto 0
-  width: 3.5em
+  display: block
+  margin: 0 auto
+  width: 100%
   border-radius: 50%
 
 
 .tutorial__post__footer__info
-  float: left
+  margin: .55em auto 0
   max-width: 25.5em
   font-size: 1.05em
+
+  +respond-at(1040px)
+    float: left
+    margin: 0
+    max-width: 25.5em
 
 
 .tutorial__post__footer__info__author__name
@@ -40,18 +54,20 @@
 
 .tutorial__post__footer__info__author__slogan
   display: inline-block
-  float: left
   margin: .35em 0 0
   line-height: 1.4em
 
 
 .tutorial__post__footer__author__link__wrapper
-  float: right
+  margin-top: .6em
+
+  +respond-at(1040px)
+    margin-top: 1.5em
+    float: right
 
 
 .tutorial__post__footer__author__link
   display: inline-block
-  margin-top: 1.5em
   padding: 0 .5em .25em
   border: 1px solid
   border-radius: .185em
