@@ -1,9 +1,5 @@
 # Title, decription, tagline and URL for your site
 # Can be used in your theme by calling 'site.title' and so on
-title: Danel
-description:
-tagline:
-url: localhost:4000
 
-source: src
-destination: serve
+source: 'src'
+destination: 'serve'

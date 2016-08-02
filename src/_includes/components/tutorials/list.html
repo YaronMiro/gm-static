@@ -1,0 +1,25 @@
+<li class="tutorials__list__item">
+    <a href="{{ post.url }}" class="tutorials__list__item__link">
+      <div class="tutorials__list__item__info">
+        <h3 class="tutorials__list__item__info__title box--{{ category_color }}">{{ post.title }}</h3>
+        <ul class="tutorials__list__item__icons">
+          <li class="tutorials__list__item__icons__item">
+            <span class="tutorials__list__item__icons__item__category c--{{ category_color }}">{{ post.category }}</span>
+          </li>
+          <li class="tutorials__list__item__icons__item">
+            <img class="tutorials__list__item__icons__item__icon" src="/images/elements/{{ post.type }}-icon.svg" alt="Tutorial type {{ post.type }} icon"/>
+            <span class="tutorials__list__item__icons__item__text">{{ post.type | capitalize }}</span>
+          </li>
+          <li class="tutorials__list__item__icons__item">
+            <img class="tutorials__list__item__icons__item__icon" src="/images/elements/skill-{{ skill_level }}.svg" alt="Tutorial skill level-{{ post.skill }} icon"/>
+            <span class="tutorials__list__item__icons__item__text tutorials__list__item__icons__item__text--skill">{{ post.skill | capitalize }}</span>
+          </li>
+        </ul>
+         <div class="tutorials__list__item__info__date">Published {{ post.date | date: "%b %-d, %Y" }}</div>
+      </div>
+      <div class="tutorials__list__item__thumbnail__wrapper">
+        <img class="tutorials__list__item__thumbnail" src="/images/elements/posts/{{ main_post_category }}/icon.svg" alt="Tutorial main category icon"/>
+      </div>
+      <div class="clearfix"></div>
+    </a>
+  </li>

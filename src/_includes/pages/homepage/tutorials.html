@@ -1,0 +1,30 @@
+<header class="tutorials__header">
+  <h3 class="tutorials__header__title">Recent Tutorials</h3>
+  <div class="tutorials__header__navigation">
+    <div class="tutorials__header__view__type__navigation" data-tab-content-target="#tutorials">
+      <button class="tutorials__header__view__type__navigation__button tutorials__header__view__type__navigation__button__grid tab--active" data-tab-target="#tutorials__grid__wrapper"></button>
+      <button class="tutorials__header__view__type__navigation__button tutorials__header__view__type__navigation__button__list " data-tab-target="#tutorials__list"></button>
+    </div>
+    <a class="tutorials__header__tutorials__link" href="/tutorials">See All Tutorials</a>
+  </div>
+</header>
+<section class="tutorials" id="tutorials">
+  <ul class="data__tab__content tutorials__list" id="tutorials__list">
+    {% for post in site.posts limit: 12 %}
+      {% capture skill_level %}{{ site.data.settings.skill[post.skill] }}{% endcapture %}
+      {% capture category_color %}{{ site.data.settings.categories[post.category] }}{% endcapture %}
+      {% capture main_post_category %}{{ post.category | downcase | replace_first: ' ', '-' }}{% endcapture %}
+    {% include components/tutorials/list.html %}
+    {% endfor %}
+  </ul>
+  <div class="tutorials__grid__wrapper data__tab__content tab--visible" id="tutorials__grid__wrapper">
+    <ul class="tutorials__grid clearfix">
+      {% for post in site.posts limit: 12 %}
+      {% capture category_color %}{{ site.data.settings.categories[post.category] }}{% endcapture %}
+      {% capture thumbnail_category %}{{ post.category | downcase | replace_first: ' ', '-' }}{% endcapture %}
+      {% include components/tutorials/grid.html %}
+      {% endfor %}
+    </ul>
+    <a class="tutorials__link" href="/tutorials">See All Tutorials</a>
+  </div>
+</section>

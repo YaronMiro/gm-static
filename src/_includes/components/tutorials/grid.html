@@ -1,0 +1,28 @@
+<li class="tutorials__grid__item">
+  <a href="{{ post.url }}" class="tutorials__grid__link">
+    <header class="tutorials__grid__item__thumbnail bg--{{ category_color }}">
+      <span class="tutorials__grid__item__thumbnail__icon__small__first">
+        <img class="tutorial__grid__item__thumbnail__icon" src="/images/elements/tutorial-thumbnail/{{ thumbnail_category }}/first.svg" alt="Tutorial illustration image"/>
+      </span>
+      <span class="tutorials__grid__item__thumbnail__icon__large">
+        <img class="tutorial__grid__item__thumbnail__icon" src="/images/elements/tutorial-thumbnail/{{ thumbnail_category }}/large.svg" alt="Tutorial illustration image"/>
+      </span>
+      <span class="tutorials__grid__item__thumbnail__icon__small__last">
+        <img class="tutorial__grid__item__thumbnail__icon" src="/images/elements/tutorial-thumbnail/{{ thumbnail_category }}/last.svg" alt="Tutorial illustration image"/>
+      </span>
+    </header>
+    <div class="tutorials__grid__item__title">{{ post.title }}</div>
+    <div class="tutorials__grid__item__icons">
+      <span class="tutorials__grid__item__icons__item tutorials__grid__item__icons__item__type">
+        <img src="/images/elements/{{ post.type }}-icon.svg" alt="Tutorial type {{ post.type }} icon" title="Tutorial type - {{ post.type }}"/>
+      </span>
+      <span class="tutorials__grid__item__icons__item__category">
+        <span class="tutorials__grid__item__icons__item__category__text c--{{ category_color }}">{{ post.category }}</span>
+      </span>
+      <span class="tutorials__grid__item__icons__item tutorials__grid__item__icons__item__skill">
+        <img class="tutorials__grid__item__icons__item__skill__icon" src="/images/elements/skill-{{ skill_level }}.svg" alt="Tutorial skill {{ post.skill }} icon" title="Tutorial skill - {{ post.skill }}"/>
+      </span>
+    </div>
+  </a>
+  <span class="tutorials__grid__item__info">{{ post.type | capitalize }} Published {{ post.date | date: "%b %-d, %Y" }}</span>
+</li>

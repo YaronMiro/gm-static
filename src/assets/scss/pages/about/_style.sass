@@ -1,0 +1,169 @@
+.about__page
+  +page-container()
+
+
+.about__page__img
+  margin-bottom: 2.5rem
+  height: 12rem
+  background:
+    size: auto 100%
+    image: url("/images/pages/about/about.jpg")
+    repeat: no-repeat
+    position: left bottom
+    
+  +respond-at(580px)
+    height: 15rem
+
+  +respond-at(660px)
+    height: 18rem
+
+  +respond-at(730px)
+    margin-bottom: 4rem
+    height: 22rem
+
+
+.about__page__img__container
+  display: none
+  margin-left: 60.7vw
+  padding-top: 3.4rem
+  width: 4rem
+  font-size: .8em
+
+  +respond-at(365px)
+    display: block
+
+  +respond-at(450px)
+    margin-left: 48vw
+    padding-top: 2.3rem
+    width: 10.5rem
+
+  +respond-at(520px)
+    margin-left: 42.4vw
+    width: 10.8rem
+
+  +respond-at(580px)
+    margin-left: 45.9vw
+    padding-top: 3.9rem
+    width: 12.2rem
+    font-size: .93em
+
+  +respond-at(660px)
+    margin-left: 49.4vw
+    padding-top: 5.8rem
+    font-size: 1em
+
+  +respond-at(730px)
+    margin-left: 54.3vw
+    padding-top: 7.5rem
+    width: 12.9rem
+    font-size: 1.18em
+
+  +respond-at(1060px)
+    margin-left: 34.6rem
+
+
+.about__page__img__icons-list
+  color: rgba($white, 0.5)
+  text-align: center
+
+
+.about__page__img__icons-list__item
+  display: block
+  margin-bottom: .55em
+  padding-bottom: .25em
+  border-radius: .185em
+  line-height: 1.25em
+  text-align: center
+  background: $grey-dark
+
+  &:last-child
+    margin-bottom: .3em
+
+  +respond-at(425px)
+    margin: 0 auto .55em
+    width: 4rem
+
+  +respond-at(580px)
+    width: 5rem
+
+  +respond-at(730px)
+    width: 6rem
+
+
+.about__page__img__title
+  display: none
+  margin: 0
+  font-size: 1.2em
+  font-weight: $weight-thin
+  text-align: center
+  color: $grey-dark
+
+  +respond-at(450px)
+    display: block
+
+  +respond-at(730px)
+    font-size: 1em
+
+.about__page__section
+  margin-bottom: 5rem
+
+  p
+   margin-top: .7rem
+
+.about__page__section--line-through
+  position: relative
+  margin-bottom: 0
+  padding-bottom: 5rem
+  font-size: 1rem
+
+  &::before
+    z-index: 1
+    position: absolute
+    content: ""
+    top: 1.3em
+    left: 0
+    right: 0
+    height: 1px
+    background: $mist
+
+
+.about__page__section_link
+  z-index: 2
+  position: absolute
+  left: 0
+  right: 0
+  display: block
+  margin: 0 auto
+  padding-bottom: .25em
+  width: 8em
+  text-decoration: none
+  border-radius: .185em
+  line-height: 2.25em
+  text-align: center
+  color: rgba($white, 0.9)
+  background: $green
+
+  &:hover
+    background: $green-dark
+
+
+.about__page__section_link_text
+  display: block
+  margin: 0 auto
+  padding-bottom: .25em
+  width: 8rem
+  text-decoration: none
+  border-radius: .185em
+  font-size: 1rem
+  line-height: 2.25em
+  text-align: center
+  color: $mist
+  background: $green
+
+
+.about__page__title__info-icon
+  +title-with-icon("/images/elements/info.svg")
+
+
+.about__page__title__avatar-icon
+  +title-with-icon("/images/elements/avatar.svg")

@@ -1,0 +1,33 @@
+.header__container__search
+  +font($weight-thin, 1.1rem, $roboto_condensed)
+  height: 3em
+
+.header__container__search__input
+  width: 100%
+  height: 100%
+  padding: 0 .9em
+  border: 0
+  color: inherit
+
+  +respond-at(850px)
+    width: 92%
+
+  &:focus
+    outline: 0
+
+
+.header__container__search__submit
+  +reset-button-style()
+  width: 100%
+  height: 100%
+  padding: 0
+  color: $white
+  background-color: $green
+
+  +respond-at(850px)
+    width: 8%
+    float: right
+
+  &:hover
+    outline: 0
+    background-color: $green-dark

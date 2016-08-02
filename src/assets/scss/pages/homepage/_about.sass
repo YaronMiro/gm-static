@@ -1,0 +1,46 @@
+.about__homepage
+  margin-top: 4.4em
+  color: $grey-medium
+  font-size: 1.17rem
+  line-height: 1.689rem
+  text-align: center
+
+
+.about__homepage__avatar
+  border-radius: 50%
+  width: 4.3em
+
+
+.about__homepage__me,
+.about__homepage__site
+  margin: 0 auto
+
+
+.about__homepage__me
+  max-width: 25em
+
+
+.about__homepage__divider
+  position: relative
+  margin: 1.7em auto 1.3em
+  max-width: 25.1em
+  height: 1px
+  background: $mist
+
+  &::after
+    content: ""
+    position: absolute
+    top: -0.4em
+    left: 50%
+    width: 6.2em
+    height: 1em
+    margin-left: -2.95em
+    background-color: transparent  // Hack some devices crop the svg image.
+    background:
+      image: url("/images/elements/about-divider.svg")
+      repeat: no-repeat
+      size: 6.1em
+
+
+.about__homepage__site
+  max-width: 44em

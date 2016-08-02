@@ -1,0 +1,127 @@
+.footer
+
+  .nav
+    @extend .nav--basic
+    +clearfix()
+    min-height: 3em
+    padding: 0
+    text-align: center
+
+    +respond-at(640px)
+      padding: 0 2.25em
+      text-align: left
+
+
+  .nav__copyrights
+    display: block
+    float: none
+    line-height: normal
+    margin: .35em 0 0
+    padding: .4em 1.5em 1em
+
+    +respond-at(640px)
+      float: right
+      margin: 0
+      padding: 0 0 0 1em
+      line-height: inherit
+
+
+  .nav__copyrights__section
+    display: block
+
+    +respond-at(360px)
+      display: inline
+
+
+  .nav__list
+    display: block
+    margin: 1.3em 0 0 0
+    padding: 0 3em
+    list-style: none
+    line-height: 1em
+
+    +respond-at(640px)
+      display: inline-block
+      float: left
+      margin: 0
+      padding: 0
+      line-height: inherit
+
+
+  .nav__list__item
+    display: block
+    margin: 1.2em auto
+    max-width: 15em
+
+    &:last-child
+      margin-bottom: 0
+
+    +respond-at(640px)
+      display: inline-block
+      margin: 0 1.6em 0 0
+      padding: 0
+      border-radius: 0
+      border: 0
+
+      &:last-child
+        margin: 0
+
+
+  .nav__list__item__link
+    display: block
+    padding: .4em 0 .5em
+    text-decoration: none
+    color: inherit
+    border: 1px solid rgba($white, .15)
+    border-radius: .3em
+
+    &:hover
+      background-color: $grey-medium
+
+    +respond-at(640px)
+      display: inline
+      padding: 0
+      border: 0
+      border-radius: .0
+
+      &:hover
+        background-color: transparent
+        color: $green
+
+
+  .nav__list__item__link--icon
+    position: relative
+    padding-left: 1.3em
+
+    +respond-at(640px)
+    &::before
+      content: ""
+      position: absolute
+      top: .48em
+      left: 50%
+      margin-left: -2.1em
+      width: 1em
+      height: .9em
+      background:
+        repeat: no-repeat
+        size: 1em
+      opacity: 0.8
+
+    +respond-at(640px)
+      &::before
+        left: 0
+        margin-left: 0
+
+
+  .nav__list__item__link--facebook
+    padding-left: 1.3em
+
+    &::before
+      background-image: url("/images/elements/facebook.svg")
+
+  .nav__list__item__link--twitter::before
+    background-image: url("/images/elements/twitter.svg")
+
+
+  .nav__list__item__link--github::before
+    background-image: url("/images/elements/github.svg")

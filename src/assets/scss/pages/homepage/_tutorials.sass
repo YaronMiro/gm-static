@@ -1,0 +1,116 @@
+.tutorials__link
+  display: block
+  margin: 3em 0 0
+  padding: .4em 0 .5em
+  text-decoration: none
+  color: $grey-medium
+  background-color: $soft
+  border: 1px solid $mist
+  border-radius: .185em
+  font-size: 1rem
+  line-height: normal
+  text-align: center
+  transition: color .15s ease-out
+  @extend .link-arrow
+
+  &:hover
+    color: $grey-dark
+    background-color: darken($soft, 3%)
+
+  +respond-at(550px)
+    display: none
+
+
+.tutorials__header
+  +clearfix()
+  margin-top: 5em
+  padding: 0 .75em .55em
+  color: $grey-medium
+  border-bottom: 1px solid $mist
+  font:
+    family: $catamaran
+    size: 1rem
+    weight: $weight-thin
+
+  +respond-at(550px)
+    margin-top: 6em
+    border-top: 0
+
+
+.tutorials__header__title
+  float: left
+  margin: 0
+  font:
+    size: 1.4em
+    weight: inherit
+
+
+.tutorials__header__navigation
+  margin-top: .5em
+  float: right
+
+
+.tutorials__header__view__type__navigation
+  display: inline-block
+
+
+.tutorials__header__view__type__navigation__button
+  +reset-button-style()
+  height: 1.9em
+  width: 2em
+  margin-right: .5em
+  vertical-align: middle
+  background-repeat: no-repeat
+
+  &:last-child
+    margin-right: 0
+
+  &.tab--active
+    cursor: default
+
+  &.tutorials__header__view__type__navigation__button__grid
+    background-image: url("/images/elements/grid.svg")
+
+    &:hover,
+    &.tab--active
+      background-image: url("/images/elements/grid-active.svg")
+
+  &.tutorials__header__view__type__navigation__button__list
+    background-image: url("/images/elements/list.svg")
+
+    &:hover,
+    &.tab--active
+      background-image: url("/images/elements/list-active.svg")
+
+
+.tutorials__header__tutorials__link
+  display: none
+  float: right
+  margin-left: 1.7em
+  color: inherit
+  text-decoration: none
+  font-size: 1.1em
+  transition: color .1s ease-out
+  @extend .link-arrow
+
+  &:hover
+    color: $grey-dark
+
+  +respond-at(550px)
+    display: inline-block
+
+
+.tutorials
+  padding: 0
+  color: $grey-medium
+  font:
+    family: $catamaran
+    size: 1rem
+    weight: $weight-thin
+
+
+.data__tab__content
+  display: none
+
+  &.tab--visible
+    display: block

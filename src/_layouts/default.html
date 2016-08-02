@@ -3,13 +3,12 @@
   {% include components/head.html %}
   <body>
     <div style="display:none;">{% include elements.svg %}</div>
-
-    <main>
-      {{ content }}
-    </main>
-
-  {% include components/footer.html %}
-
-    <script src="assets/javascript/script.js"></script>
+    <div class="container__main">
+      {% include components/header.html %}
+      <main class="container__main__content">
+        {{ content }}
+      </main>
+      {% include components/footer.html %}
+    </div>
   </body>
 </html>

@@ -1,0 +1,145 @@
+.tutorials__list
+  margin: 0
+  padding: 0
+  list-style: none
+
+
+.tutorials__list__item
+  +clearfix()
+  margin: 0
+  border-bottom: 1px solid $mist
+
+  &:nth-child(n+7)
+    display: none
+
+  +respond-at(550px)
+    &:nth-child(n+7)
+      display: block
+
+  &:hover
+    .tutorials__list__item__link
+      background-color: rgba($mist, 0.11)
+
+    .tutorials__list__item__info__title
+      color: rgba($grey-dark,0.9)
+
+    .tutorials__list__item__thumbnail__wrapper
+      opacity: .7
+
+
+.tutorials__list__item__link
+  display: block
+  padding: 1.6em .75em 1.8em
+  color: inherit
+  text-decoration: none
+
+.tutorials__list__item__info
+  +respond-at(680px)
+    float: left
+
+
+.tutorials__list__item__info__title
+  position: relative
+  display: block
+  margin: 0
+  padding-left: 1em
+  padding-right: 1em
+  max-width: 90%
+  color: rgba($grey-medium,0.85)
+  line-height: 1.3em
+  font:
+    size: 1.25em
+    weight: $weight-regular
+  transition: color .2s ease-out, background .1s ease-in
+
+  +respond-at(680px)
+    max-width: 21em
+
+
+  +add-color-classes-rectangle()
+  &::before
+    content: ""
+    display: inline-block
+    width: .4em
+    height: .4em
+    margin: -.23em .5em 0 -1em
+    vertical-align: middle
+    border-radius: 1px
+    opacity: 0.85
+
+
+.tutorials__list__item__thumbnail__wrapper
+  display: none
+
+  +respond-at(680px)
+    display: inline-block
+    float: right
+    width: 6em
+    text-align: center
+    opacity: .45
+
+.tutorials__list__item__thumbnail
+  margin-top: 1.3em
+
+.tutorials__list__item__info__date
+  margin: .75em 0 0 1.3em
+  color: rgba($grey-light, 0.8)
+  font-family: $roboto_condensed
+  font-size: 1em
+
+
+.tutorials__list__item__icons
+  display: inline-block
+  list-style: none
+  margin: 2em 0 0 1.3em
+  padding: 0
+
+
+.tutorials__list__item__icons__item
+  float: left
+  text-align: center
+  color: $grey-medium
+
+  &:nth-child(2)
+    margin: 0 .75em
+    padding: 0 .75em
+    border-left: 1px solid $mist
+    border-right: 1px solid $mist
+
+
+.tutorials__list__item__icons__item__icon
+  margin-top: .15em
+  vertical-align: middle
+
+
+.tutorials__list__item__icons__item__text
+  display: none
+
+  +respond-at(450px)
+    display: inline-block
+    vertical-align: middle
+    margin-top: .25em
+    margin-left: .3em
+    color: $grey-medium
+
+
+.tutorials__list__item__icons__item__text--skill
+  margin-top: .35em
+
+
+.tutorials__list__item__icons__item__category
+  display: inline-block
+  margin-top: 0.4em
+  padding: .25em .55em .55em
+  line-height: .6em
+  font-family: $catamaran
+  border: 1px solid
+  border-radius: .185em
+  text-align: center
+  background-color: $white
+  +add-global--category-border-color-classes()
+
+
+
+
+

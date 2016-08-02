@@ -1,17 +1,20 @@
 <head>
   <meta charset="utf-8">
-  <title>Gabriel Miro - OS X & iOS Tutorials For Developers</title>
+  <title>Gabriel Miro - {{ page.title }}</title>
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="assets/stylesheets/style.css">
-  <link rel="stylesheet" href="assets/fonts/alef/alef.css">
-  <link rel="stylesheet" href="assets/fonts/almoni/almoni.css">
-  <link rel="stylesheet" href="assets/fonts/stanga/stanga.css">
-  <!--jQuery CDN-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-  <!--Local fallback-->
-  <script type="text/javascript">
-    if (!window.jQuery) {
-      document.write('<script src="assets/javascript/jquery-2.2.3.min.js"><\/script>');
-    }
-  </script>
+
+  <!-- CSS -->
+  <!-- build:css /assets/stylesheets/style.min.css -->
+  <link rel="stylesheet" href="/bower_components/floatl/dist/css/floatl.min.css">
+  <link rel="stylesheet" href="/assets/stylesheets/style.css">
+  <!-- endbuild -->
+  <link rel="stylesheet" href="/assets/fonts/catamaran/catamaran.css">
+  <link rel="stylesheet" href="/assets/fonts/roboto_condensed/roboto_condensed.css">
+
+  <!-- JS -->
+  <!-- build:js /assets/javascript/all.min.js -->
+  <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/bower_components/floatl/dist/js/floatl.min.js"></script>
+  <script src="/assets/javascript/script.js"></script>
+  <!-- endbuild -->
 </head>

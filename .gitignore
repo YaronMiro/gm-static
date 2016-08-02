@@ -26,6 +26,8 @@ Thumbs.db
 # Static site Generated files #
 #=============================#
 src/assets/stylesheets/style.css
+src/assets/fonts/font-awesome
 serve
 site
 node_modules
+bower_components

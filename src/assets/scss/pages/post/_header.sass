@@ -1,0 +1,131 @@
+.tutorial__post__header
+  padding: 0 1.25em
+
+
+.tutorial__post__header__title
+  margin: -.2em 0 0
+  line-height: 1.2em
+  font-size: 2.8em
+  font-weight: $weight-thin
+
+
+.tutorial__post__header__category__icon
+  opacity: .7
+
+
+.tutorial__post__header__info
+  display: inline-block
+  margin-top: .8em
+  color: $grey-light
+  font-family: $roboto_condensed
+  font-size: 1.1em
+
+
+.tutorial__post__icons
+  +clearfix()
+  margin: 8em 0 0
+  padding: 0 1.25em .7em
+  border-bottom: 1px solid $mist
+  font-family: $roboto_condensed
+
+
+.tutorial__post__icons__info
+  margin: 0
+  padding: 0
+  list-style: none
+
+
+.tutorial__post__icons__item
+  float: left
+  line-height: .85em
+  +right-border-separator()
+
+
+.tutorial__post__icons__item__icon
+  margin-top: .15em
+  vertical-align: middle
+
+
+.tutorial__post__icons__item__text
+  display: inline-block
+  vertical-align: middle
+  margin-top: .25em
+  margin-left: .3em
+  color: $grey-medium
+
+
+.tutorial__post__icons__item__text--skill
+  margin-top: .35em
+
+
+.tutorial__post__icons__item__category
+  display: inline-block
+  margin-top: 0.1em
+  padding: .25em .55em .55em
+  line-height: .6em
+  font-family: $catamaran
+  border: 1px solid
+  border-radius: .185em
+  text-align: center
+  background-color: $white
+  +add-global--category-border-color-classes()
+
+
+.tutorial__post__icons__social
+  margin: .3em 0 0
+  padding: 0
+  list-style: none
+  float: right
+
+
+.tutorial__post__icons__social__item
+  line-height: .85em
+  float: left
+  +right-border-separator()
+
+
+.tutorial__post__icons__social__item__link
+  display: inline-block
+  padding: .2em .65em .15em
+  border: 1px solid $mist
+  border-radius: .185em
+  opacity: .85
+
+
+.tutorial__post__icons__social__item__icon
+  width: .9em
+
+
+.tutorial__post__tags
+  margin: 0
+  padding: .1em 1em 0
+
+
+.tutorial__post__tags__list
+  display: inline-block
+  list-style: none
+  margin: 0
+  padding: 0
+
+
+.tutorial__post__tags__icon
+  margin-right: .3em
+
+
+.tutorial__post__tags__list__item
+  float: left
+  color: $grey-medium
+
+  &:not(:last-child)::after
+    content: "|"
+    padding-left: .2em
+    margin-right: .35em
+
+
+.tutorial__post__tags__list__item__link
+  display: inline-block
+  color: inherit
+  text-decoration: none
+
+  &:hover
+    color: darken($grey-dark, 10%)

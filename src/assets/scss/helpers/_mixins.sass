@@ -1,0 +1,135 @@
+// Creates @media breakpoints
+=respond-at($media)
+  @media (min-width: $media)
+    @content
+
+
+=font($weight: normal, $size: 14px, $font-family: $sans-serif)
+  font-size: $size
+  font-weight: $weight
+  font-family: $font-family
+
+
+// Copied from bootstrap
+=clearfix()
+  clear: both
+  *zoom: 1
+  &:before,
+  &:after
+    display: table
+    content: ""
+    line-height: 0
+
+  &:after
+    clear: both
+
+=reset-button-style()
+  padding-left: 0
+  padding-right: 0
+  background: transparent
+  border: 0
+  color: inherit
+
+  &:focus
+    outline: 0
+
+=double_border($position: top)
+  position: relative
+  $pesudo: before
+
+  @if $position == bottom
+    $pesudo: after
+
+  &::#{$pesudo}
+    content: ""
+    position: absolute
+    #{$position}: 0
+    left: 0
+    width: 100%
+    height: .2rem
+    background: $white
+    border-top: 1px solid rgba($mist, 0.6)
+    border-bottom: 1px solid rgba($mist, 0.6)
+
+
+=add-color-classes-rectangle()
+  @each $name, $value in $colors
+    &.box--#{$name}
+      &::before
+        background-color: $value
+
+
+=add-post-category-icon()
+  @each $name in $categories
+
+    &.tutorial__post__header__category__icon--#{$name}
+      background:
+        image: url("/images/elements/tutorial-thumbnail/#{$name}/large.svg")
+        repeat: no-repeat
+
+
+=add-global--color-classes()
+  @each $name, $value in $colors
+    &.c--#{$name}
+      color: $value
+
+
+=add-global--category-border-color-classes()
+  @each $name, $value in $colors
+    &.c--#{$name}
+      border-color: rgba($value, .5)
+
+
+=add-global--bg-color-classes()
+  @each $name, $value in $colors
+    &.bg--#{$name}
+      background-color: $value
+
+
+=page-container()
+  margin: 0 1rem
+  color: $grey-medium
+  font-size: 1.17rem
+  line-height: 1.689rem
+
+  +respond-at(520px)
+    margin: 0 2rem
+
+  +respond-at(850px)
+    margin: 0 3rem
+
+  +respond-at(1060px)
+    margin: 0 5rem
+
+
+=title-with-icon($icon-path)
+  position: relative
+  margin: 0 0 .6em
+  font-size: 1.6rem
+  font-weight: $weight-regular
+
+  +respond-at(380px)
+    padding-left: 1.3em
+
+    &::before
+      content: ""
+      position: absolute
+      top: 0.14em
+      left: 0
+      width: 1em
+      height: 1em
+      background:
+        image: url($icon-path)
+        repeat: no-repeat
+        size: 1em
+
+=right-border-separator()
+  &:not(:last-child)
+    padding-right: .75em
+    margin-right: .75em
+    border-right: 1px solid rgba($grey-light, .25)
+
+
+.link-arrow
+  &::after
+    content: " >>"

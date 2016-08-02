@@ -41,15 +41,15 @@ gulp.task("jekyll:prod", $.shell.task("jekyll build --config _config.yml,_config
 
 // Compiles the SASS files and moves them into the "assets/stylesheets" directory
 gulp.task("styles", function () {
-  // Looks at the style.scss file for what to include and creates a style.css file
-  return gulp.src("src/assets/scss/style.scss")
+  // Looks at the style.sass file for what to include and creates a style.css file
+  return gulp.src("src/assets/scss/style.sass")
     .pipe($.sass())
     // AutoPrefix your CSS so it works between browsers
     .pipe($.autoprefixer("last 1 version", { cascade: true }))
     // Directory your CSS file goes to
     .pipe(gulp.dest("src/assets/stylesheets/"))
     .pipe(gulp.dest("serve/assets/stylesheets/"))
-    .pipe(gulp.dest("site/assets/stylesheets/"))
+//    .pipe(gulp.dest("site/assets/stylesheets/"))
     // Outputs the size of the CSS file
     .pipe($.size({title: "styles"}))
     // Injects the CSS changes to your browser since Jekyll doesn"t rebuild the CSS
@@ -59,7 +59,7 @@ gulp.task("styles", function () {
 gulp.task("js", function() {
   gulp.src('./src/assets/javascript/*.js')
     .pipe(gulp.dest('./src/assets/javascript'))
-    .pipe(gulp.dest("site/assets/javascript/"));
+//    .pipe(gulp.dest("site/assets/javascript/"));
 });
 
 // Optimizes the images that exists
@@ -100,7 +100,7 @@ gulp.task("copy", function () {
 gulp.task("cname", function () {
   return gulp.src(["serve/CNAME"])
     .pipe(gulp.dest("site"))
-    .pipe($.size({ title: "CNAMe" }))
+    .pipe($.size({ title: "CNAME" }))
 });
 
 
@@ -115,12 +115,12 @@ gulp.task("html", ["styles"], function () {
     // Minify CSS
     .pipe($.if("*.css", $.minifyCss()))
     // Start cache busting the files
-    .pipe($.revAll({ ignore: [".eot", ".svg", ".ttf", ".woff"] }))
+//    .pipe($.revAll({ ignore: [".eot", ".svg", ".ttf", ".woff"] }))
     .pipe(assets.restore())
     // Conctenate your files based on what you specified in _layout/header.html
     .pipe($.useref())
     // Replace the asset names with their cache busted names
-    .pipe($.revReplace())
+//    .pipe($.revReplace())
     // Minify HTML
     .pipe($.if("*.html", $.htmlmin({
       removeComments: true,
@@ -180,7 +180,7 @@ gulp.task("serve:dev", ["styles", "jekyll:dev", "js"], function () {
 gulp.task("watch", function () {
   gulp.watch(["src/**/*.md", "src/**/*.html", "src/**/*.xml", "src/**/*.txt", "src/**/*.js"], ["jekyll-rebuild"]);
   gulp.watch(["serve/assets/stylesheets/*.css"], reload({stream: true}));
-  gulp.watch(["src/assets/scss/**/*.scss"], ["styles"]);
+  gulp.watch(["src/assets/scss/**/*.scss", "src/assets/scss/**/*.sass"], ["styles"]);
 });
 
 // Serve the site after optimizations to see that everything looks fine
@@ -206,7 +206,7 @@ gulp.task("check", ["jslint", "doctor"], function () {
 gulp.task("build", ["jekyll:prod", "styles", "js"], function () {});
 
 // Copies favicon to the site folder
-gulp.task("copy-favicon", function() {
+gulp.task("copyFavicon", function() {
   return gulp.src("src/assets/favicon.png")
     .pipe(gulp.dest("site/assets"));
 })
@@ -214,11 +214,11 @@ gulp.task("copy-favicon", function() {
 // Builds your site with the "build" command and then runs all the optimizations on
 // it and outputs it to "./site"
 gulp.task("publish", ["build"], function () {
-  gulp.start("html", "copy", "cname", "images", "fonts", "vendors", "js", "copy-favicon");
+  gulp.start("html", "copy", "cname", "images", "fonts", "vendors", "js", "copyFavicon");
 });
 
 
-
+// Creates an SVG sprite file from multiple SVG files.
 gulp.task('svgstore', function () {
     return gulp
         .src('src/images/elements/*.svg')
@@ -235,5 +235,6 @@ gulp.task('svgstore', function () {
             }
         }))
         .pipe(svgstore())
-        .pipe(gulp.dest('src/_includes/'));
+        .pipe(gulp.dest("src/_includes/"));
 });
+

@@ -1,0 +1,102 @@
+.hero
+  +double_border()
+  +double_border(bottom)
+
+
+.hero__content
+  +clearfix()
+
+
+.hero__content__narrow
+  display: none
+
+
+.hero__content__container
+  text-align: center
+  padding: 3rem 0
+  color: $grey-medium
+  font:
+    family: $catamaran
+    size: 1.5rem
+    weight: $weight-thin
+  line-height: 1.8rem
+
+  &:first-child
+    +double_border(bottom)
+
+  +respond-at(790px)
+    width: 50%
+    float: left
+    font-size: 1.32rem
+
+    &:first-child::after
+      border-top: 0
+      border-bottom: 0
+
+    &:last-child
+      border-left: 1px solid $mist
+
+  +respond-at(850px)
+    font-size: 1.45rem
+
+  +respond-at(1000px)
+    font-size: 1.55rem
+
+
+.hero__content__container__icons-list
+  margin: 0 0 -.15em 0
+  padding: 0
+  color: $white-medium
+  list-style: none
+  font-size: 0.855em
+
+  +respond-at(480px)
+    margin: 0 0 .3em
+
+  +respond-at(790px)
+    margin: .6em 0 .15em
+
+
+.hero__content__container__icons-list__item
+  width: 4.85em
+  display: inline-block
+  margin: 0 .39em .4em 0
+  padding-bottom: .25em
+  line-height: 1.25em
+  text-align: center
+  border-radius: .185em
+
+  &:last-child
+    padding-left: .05em
+
+  +respond-at(380px)
+    width: 6.15em
+
+  +respond-at(480px)
+    width: 4em
+    margin: 0 .35em 0 0
+
+    &:last-child
+      margin-right: 0
+
+
+.hero__content__container__slogan__logo
+  margin: 0 auto
+  width: 4em
+  height: 1.88em
+  background-image: url("/images/elements/logo.svg")
+  background-repeat: no-repeat
+  background-size: 3.9em
+
+  +respond-at(790px)
+    margin-bottom: .145em
+
+.hero__content__container__slogan__title,
+.hero__content__container__icons__title
+  display: inline-block
+  margin: 0
+  font-size: inherit
+  font-weight: inherit
+
+  +respond-at(790px)
+    font-size: .95em
