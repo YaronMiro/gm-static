@@ -1,21 +1,21 @@
 .tutorials__link
   display: block
-  margin: 3em 0 0
-  padding: .4em 0 .5em
-  text-decoration: none
-  color: $grey-medium
-  background-color: $soft
-  border: 1px solid $mist
+  margin: 3em auto 0
+  padding: 0 .5em .25em
+  width: 80%
+  color: $green
+  border: 1px solid rgba($green, .5)
   border-radius: .185em
-  font-size: 1rem
-  line-height: normal
+  text-decoration: none
   text-align: center
-  transition: color .15s ease-out
+  line-height: 1.3em
+  font-size: 1.1em
   @extend .link-arrow
 
   &:hover
-    color: $grey-dark
-    background-color: darken($soft, 3%)
+    color: darken($green, 13%)
+    border-color: darken($green, 2%)
+
 
   +respond-at(550px)
     display: none

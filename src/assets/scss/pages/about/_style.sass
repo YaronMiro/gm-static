@@ -105,17 +105,16 @@
     font-size: 1em
 
 .about__page__section
-  margin-bottom: 5rem
+  margin-top: 5rem
 
   p
    margin-top: .7rem
 
 
 .about__page__section_link
-  display: block
-  margin: 0 auto
+  display: inline-block
+  margin-top: 1em
   padding: 0 .5em .25em
-  width: 9em
   color: $green
   border: 1px solid rgba($green, .5)
   border-radius: .185em
@@ -124,6 +123,10 @@
   line-height: 1.3em
   font-size: .9em
   @extend .link-arrow
+
+  &:hover
+    color: darken($green, 13%)
+    border-color: darken($green, 2%)
 
 
 .about__page__title

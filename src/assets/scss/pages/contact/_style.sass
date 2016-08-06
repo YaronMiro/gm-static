@@ -7,8 +7,11 @@
 
 
 .contact__page__title__contact-icon
-  +title-with-icon("/images/elements/contact.svg")
   margin: 0 0 1em
+  font-size: 1.2em
+  font-weight: $weight-thin
+  color: $green
+
 
 .form__contact__fields__container
   margin-right: -1rem
@@ -124,18 +127,20 @@
 
 .form__contact__submit__button
   +reset-button-style()
+  display: inline-block
   margin-top: 1em
-  padding: 0 .55em .45em
+  padding: 0 .5em .25em
+  color: $green
   width: 100%
-  text-decoration: none
+  border: 1px solid rgba($green, .5)
   border-radius: .185em
-  line-height: 1.65em
   text-align: center
-  color: rgba($white, 0.9)
-  background: $green
+  font-size: .9em
+  @extend .link-arrow
 
   &:hover
-    background: $green-dark
+    color: darken($green, 13%)
+    border-color: darken($green, 2%)
 
   +respond-at(460px)
     float: right
