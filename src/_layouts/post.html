@@ -10,7 +10,8 @@ post: true
     <img class="tutorial__post__header__category__icon" src="/images/elements/posts/{{ main_post_category }}/icon.svg" alt=""/>
     <h1 class="tutorial__post__header__title c--{{ category_color }}">{{ page.title }}</h1>
     <div class="tutorial__post__header__info">
-      Published {{ page.date | date: "%b %-d, %Y" }} | By {{ page.author }}
+      <span class="tutorial__post__header__info__text">Published {{ page.date | date: "%b %-d, %Y" }}</span>
+      <span class="tutorial__post__header__info__text">By <a class="tutorial__post__header__info__text__link" href="/about">{{ page.author }}</a></span>
     </div>
   </header>
   <div class="tutorial__post__icons">
@@ -60,14 +61,14 @@ post: true
           <img class="tutorial__post__footer__avatar" src="/images/gabiriel-miro-avatar.jpg" alt="Gabriel Miro Avatar" title="Gabriel Miro Avatar"/>
         </div>
         <div class="tutorial__post__footer__info">
-          <h4 class="tutorial__post__footer__info__author__name">{{ page.author }}</h4>
+          <h4 class="tutorial__post__footer__info__author__name c--{{ category_color }}">{{ page.author }}</h4>
           <p class="tutorial__post__footer__info__author__slogan">
             I am an accomplished programmer, development manager, educator, speaker with over 40 years of experience.
           </p>
         </div>
       </div>
       <div class="tutorial__post__footer__author__link__wrapper">
-        <a class="tutorial__post__footer__author__link c--{{ category_color }}" href="/about">Read more about me</a>
+        <a class="tutorial__post__footer__author__link c--{{ category_color }}" href="/about">About me</a>
       </div>
     </footer>
     <!-- Recent posts -->
@@ -75,14 +76,20 @@ post: true
       <h4 class="tutorial__post__recent__tutorials__title c--{{ category_color }}">Recent {{ page.category }} Tutorials</h4>
       <ul class="tutorial__post__recent__tutorials__list">
         {% for post in site.posts %}
-        {% capture main_post_category %}{{ post.category | downcase | replace_first: ' ', '-' }}{% endcapture %}
+          {% capture main_post_category %}{{ post.category | downcase | replace_first: ' ', '-' }}{% endcapture %}
         {% if post.category == page.category and post.title != page.title %}
-        <li class="tutorial__post__recent__tutorials__list__item">
-          <img class="tutorial__post__recent__tutorials__list__item_type" src="/images/elements/{{ post.type }}-icon.svg" alt="Tutorial type {{ post.type }} icon" title="Tutorial type - {{ post.type }}"/>
-          <h5 class="tutorial__post__recent__tutorials__list__item__title">{{ post.title }}</h5>
-          <span class="tutorial__post__recent__tutorials__list__item__info">{{ post.type | capitalize }} Published {{ post.date | date: "%b %-d, %Y" }}</span>
-        </li>
-        {% endif %}
+          <li class="tutorial__post__recent__tutorials__list__item">
+            <a class="tutorial__post__recent__tutorials__list__item__link" href="{{ post.url }}">
+              <div class="clearfix">
+                <span class="tutorial__post__recent__tutorials__list__item_type_wrapper">
+                  <img class="tutorial__post__recent__tutorials__list__item_type" src="/images/elements/{{ post.type }}-icon.svg" alt="Tutorial type {{ post.type }} icon" title="Tutorial type - {{ post.type }}"/>
+                </span>
+                <h5 class="tutorial__post__recent__tutorials__list__item__title">{{ post.title }}</h5>
+                <span class="tutorial__post__recent__tutorials__list__item__info">{{ post.type | capitalize }} Published {{ post.date | date: "%b %-d, %Y" }}</span>
+              </div>
+            </a>
+          </li>
+          {% endif %}
         {% endfor %}
       </ul>
       <a class="tutorial__post__recent__tutorials__link c--{{ category_color }} clearfix" href="/tutorials">See All Tutorials</a>
