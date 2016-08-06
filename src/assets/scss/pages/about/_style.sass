@@ -110,60 +110,25 @@
   p
    margin-top: .7rem
 
-.about__page__section--line-through
-  position: relative
-  margin-bottom: 0
-  padding-bottom: 5rem
-  font-size: 1rem
-
-  &::before
-    z-index: 1
-    position: absolute
-    content: ""
-    top: 1.3em
-    left: 0
-    right: 0
-    height: 1px
-    background: $mist
-
 
 .about__page__section_link
-  z-index: 2
-  position: absolute
-  left: 0
-  right: 0
   display: block
   margin: 0 auto
-  padding-bottom: .25em
-  width: 8em
-  text-decoration: none
+  padding: 0 .5em .25em
+  width: 9em
+  color: $green
+  border: 1px solid rgba($green, .5)
   border-radius: .185em
-  line-height: 2.25em
-  text-align: center
-  color: rgba($white, 0.9)
-  background: $green
-
-  &:hover
-    background: $green-dark
-
-
-.about__page__section_link_text
-  display: block
-  margin: 0 auto
-  padding-bottom: .25em
-  width: 8rem
   text-decoration: none
-  border-radius: .185em
-  font-size: 1rem
-  line-height: 2.25em
   text-align: center
-  color: $mist
-  background: $green
+  line-height: 1.3em
+  font-size: .9em
+  @extend .link-arrow
 
 
-.about__page__title__info-icon
-  +title-with-icon("/images/elements/info.svg")
-
-
-.about__page__title__avatar-icon
-  +title-with-icon("/images/elements/avatar.svg")
+.about__page__title
+  margin: 0
+  font-size: 1.5rem
+  font-weight: $weight-thin
+  line-height: 1.1em
+  color: $green

@@ -20,7 +20,7 @@
 
 
 .tutorial__post__recent__tutorials__list__item
-  padding: 1em
+  padding: .7em 1em
   border-bottom: 1px solid $mist
 
   &:first-child
@@ -30,7 +30,6 @@
     background-color: rgba($mist, 0.11)
 
     .tutorial__post__recent__tutorials__list__item__title
-      color: rgba($grey-dark,0.9)
       text-decoration: underline
 
 
@@ -60,7 +59,6 @@
   font:
     weight: $weight-thin
     size: 1em
-  transition: color .2s ease-out, background .1s ease-in
 
   &::before
     content: ""
@@ -85,7 +83,7 @@
 
 .tutorial__post__recent__tutorials__link
   display: inline-block
-  margin: 1.5em 0 0 .5em
+  margin: 1.5em 0 0 .85em
   padding: 0 .5em .25em
   border: 1px solid
   border-radius: .185em
@@ -93,3 +91,5 @@
   line-height: 1.3em
   font-size: 1.05em
   +add-global--category-border-color-classes()
+  @extend .link-arrow
+
