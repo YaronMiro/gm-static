@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "NSStackView macOS Tutorial"
+title: "Search Filter macOS Tutorial"
 category: macOS
 type: article
 skill: advanced
 tags:
 - NSStackView
 - Stack views
-permalink: /content/macos-stack-views/
+permalink: /content/macos-search-filter/
 author: "Gabriel Miro"
 ---

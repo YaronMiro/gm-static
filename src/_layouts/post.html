@@ -74,6 +74,7 @@ post: true
     <!-- Recent posts -->
     <section class="tutorial__post__recent__tutorials">
       <h4 class="tutorial__post__recent__tutorials__title c--{{ category_color }}">Recent {{ page.category }} Tutorials</h4>
+      <a class="tutorial__post__recent__tutorials__header-link" href="/tutorials">See all Tutorials</a>
       <ul class="tutorial__post__recent__tutorials__list">
         {% for post in site.posts %}
           {% capture main_post_category %}{{ post.category | downcase | replace_first: ' ', '-' }}{% endcapture %}
@@ -81,8 +82,11 @@ post: true
           <li class="tutorial__post__recent__tutorials__list__item clearfix">
             <a class="tutorial__post__recent__tutorials__list__item__link" href="{{ post.url }}">
               <div class="tutorial__post__recent__tutorials__list__item__text">
-                <h5 class="tutorial__post__recent__tutorials__list__item__title">{{ post.title }}</h5>
-                <span class="tutorial__post__recent__tutorials__list__item__info">{{ post.type | capitalize }} Published {{ post.date | date: "%b %-d, %Y" }}</span>
+                <h5 class="tutorial__post__recent__tutorials__list__item__title box--{{ category_color }}">{{ post.title }}</h5>
+                <div class="tutorial__post__recent__tutorials__list__item__info">
+                  <span class="tutorial__post__recent__tutorials__list__item__info__type">{{ post.type | capitalize }}</span>
+                  <span class="tutorial__post__recent__tutorials__list__item__info__date"> Published {{ post.date | date: "%b %-d, %Y" }}</span>
+                </div>
               </div>
               <div class="tutorial__post__recent__tutorials__list__item_icon_wrapper">
                 <img class="tutorial__post__recent__tutorials__list__item_icon" src="/images/elements/{{ post.type }}-icon.svg" alt="Tutorial type {{ post.type }} icon" title="Tutorial type - {{ post.type }}"/>

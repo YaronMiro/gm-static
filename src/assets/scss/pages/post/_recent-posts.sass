@@ -7,11 +7,31 @@
 
 
 .tutorial__post__recent__tutorials__title
-  margin: 0 0 0 .5em
+  margin: 0 0 0 1em
   font:
     weight: $weight-thin
     size: 1.45em
 
+  +respond-at(400px)
+    float: left
+    margin-bottom: .3em
+
+
+.tutorial__post__recent__tutorials__header-link
+  display: none
+  float: right
+  margin: .4em 1em 0 0
+  color: inherit
+  text-decoration: none
+  font-size: 1.1em
+  transition: color .1s ease-out
+  @extend .link-arrow
+
+  &:hover
+    color: $grey-dark
+
+  +respond-at(550px)
+    display: inline-block
 
 .tutorial__post__recent__tutorials__list
   margin: 1em 0 0
@@ -20,7 +40,8 @@
 
 
 .tutorial__post__recent__tutorials__list__item
-  padding: .7em 1em
+  font-size: 1rem
+  padding: 1.5em
   border-bottom: 1px solid $mist
 
   &:first-child
@@ -39,26 +60,36 @@
 
 
 .tutorial__post__recent__tutorials__list__item_icon_wrapper
-  float: left
-  width: 4%
   text-align: center
+  display: none
+
+  +respond-at(720px)
+    display: block
+    float: left
+    width: 4%
 
 
 .tutorial__post__recent__tutorials__list__item_icon
-  margin-top: .6em
+
+  +respond-at(720px)
+    margin-top: .6em
 
 
 .tutorial__post__recent__tutorials__list__item__text
-  float: left
-  width: 96%
+
+  +respond-at(720px)
+    float: left
+    width: 96%
 
 
 .tutorial__post__recent__tutorials__list__item__title
   margin: 0
   padding-left: 1em
+  color: rgba($grey-dark, .85)
   font:
     weight: $weight-thin
-    size: 1em
+    size: 1.15em
+  line-height: 1.5em
 
   &::before
     content: ""
@@ -68,22 +99,26 @@
     margin: -.23em .5em 0 -1em
     vertical-align: middle
     border-radius: 1px
-    background-color: $grey-medium
     opacity: 0.85
+  +add-color-classes-rectangle()
+
 
 .tutorial__post__recent__tutorials__list__item__info
+  margin-top: .5em
   padding-left: 1em
-  font:
-    family: $roboto_condensed
-    size: .95em
-  text-align: right
-  line-height: 2.2em
-  color: rgba($grey-medium, 0.7)
+  font-family: $roboto_condensed
+  color: rgba($grey-medium, .7)
+
+
+.tutorial__post__recent__tutorials__list__item__info__type
+
+  +respond-at(720px)
+    display: none
 
 
 .tutorial__post__recent__tutorials__link
   display: inline-block
-  margin: 1.5em 0 0 .85em
+  margin: 1.5em 0 0 1.25em
   padding: 0 .5em .25em
   border: 1px solid
   border-radius: .185em
@@ -92,4 +127,7 @@
   font-size: 1.05em
   +add-global--category-border-color-classes()
   @extend .link-arrow
+
+  +respond-at(550px)
+    display: none
 
