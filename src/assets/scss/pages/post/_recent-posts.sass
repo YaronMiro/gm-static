@@ -7,7 +7,7 @@
 
 
 .tutorial__post__recent__tutorials__title
-  margin: 0
+  margin: 0 0 0 .5em
   font:
     weight: $weight-thin
     size: 1.45em
@@ -20,11 +20,18 @@
 
 
 .tutorial__post__recent__tutorials__list__item
-  padding: 1em .5em
+  padding: 1em
   border-bottom: 1px solid $mist
 
   &:first-child
     border-top: 1px solid $mist
+
+  &:hover
+    background-color: rgba($mist, 0.11)
+
+    .tutorial__post__recent__tutorials__list__item__title
+      color: rgba($grey-dark,0.9)
+      text-decoration: underline
 
 
 .tutorial__post__recent__tutorials__list__item__link
@@ -32,29 +39,42 @@
   text-decoration: none
 
 
-.tutorial__post__recent__tutorials__list__item_type_wrapper
+.tutorial__post__recent__tutorials__list__item_icon_wrapper
   float: left
-  width: 1.9em
-  width: 6.5%
+  width: 4%
   text-align: center
 
 
-.tutorial__post__recent__tutorials__list__item_type
-  margin-top: .2em
+.tutorial__post__recent__tutorials__list__item_icon
+  margin-top: .6em
+
+
+.tutorial__post__recent__tutorials__list__item__text
+  float: left
+  width: 96%
 
 
 .tutorial__post__recent__tutorials__list__item__title
-  float: left
   margin: 0
-  width: 53.5%
+  padding-left: 1em
   font:
     weight: $weight-thin
     size: 1em
+  transition: color .2s ease-out, background .1s ease-in
 
+  &::before
+    content: ""
+    display: inline-block
+    width: .4em
+    height: .4em
+    margin: -.23em .5em 0 -1em
+    vertical-align: middle
+    border-radius: 1px
+    background-color: $grey-medium
+    opacity: 0.85
 
 .tutorial__post__recent__tutorials__list__item__info
-  float: right
-  width: 40%
+  padding-left: 1em
   font:
     family: $roboto_condensed
     size: .95em
@@ -65,7 +85,7 @@
 
 .tutorial__post__recent__tutorials__link
   display: inline-block
-  margin-top: 1.5em
+  margin: 1.5em 0 0 .5em
   padding: 0 .5em .25em
   border: 1px solid
   border-radius: .185em

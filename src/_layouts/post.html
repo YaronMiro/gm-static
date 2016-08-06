@@ -78,14 +78,14 @@ post: true
         {% for post in site.posts %}
           {% capture main_post_category %}{{ post.category | downcase | replace_first: ' ', '-' }}{% endcapture %}
         {% if post.category == page.category and post.title != page.title %}
-          <li class="tutorial__post__recent__tutorials__list__item">
+          <li class="tutorial__post__recent__tutorials__list__item clearfix">
             <a class="tutorial__post__recent__tutorials__list__item__link" href="{{ post.url }}">
-              <div class="clearfix">
-                <span class="tutorial__post__recent__tutorials__list__item_type_wrapper">
-                  <img class="tutorial__post__recent__tutorials__list__item_type" src="/images/elements/{{ post.type }}-icon.svg" alt="Tutorial type {{ post.type }} icon" title="Tutorial type - {{ post.type }}"/>
-                </span>
+              <div class="tutorial__post__recent__tutorials__list__item__text">
                 <h5 class="tutorial__post__recent__tutorials__list__item__title">{{ post.title }}</h5>
                 <span class="tutorial__post__recent__tutorials__list__item__info">{{ post.type | capitalize }} Published {{ post.date | date: "%b %-d, %Y" }}</span>
+              </div>
+              <div class="tutorial__post__recent__tutorials__list__item_icon_wrapper">
+                <img class="tutorial__post__recent__tutorials__list__item_icon" src="/images/elements/{{ post.type }}-icon.svg" alt="Tutorial type {{ post.type }} icon" title="Tutorial type - {{ post.type }}"/>
               </div>
             </a>
           </li>
