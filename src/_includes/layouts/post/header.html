@@ -14,16 +14,13 @@
     </li>
     <li class="tutorial__post__icons__item">
       <img class="tutorial__post__icons__item__icon" src="/images/elements/{{ page.type }}-icon.svg" alt="Tutorial type {{ page.type }} icon"/>
-      <span class="tutorial__post__icons__item__text"></span>
+      <span class="tutorial__post__icons__item__text">{{ page.type | capitalize }}</span>
     </li>
     <li class="tutorial__post__icons__item">
       <img class="tutorial__post__icons__item__icon" src="/images/elements/skill-{{ skill_level }}.svg" alt="Tutorial skill level-{{ page.skill }} icon"/>
       <span class="tutorial__post__icons__item__text tutorial__post__icons__item__text--skill">{{ page.skill | capitalize }}</span>
     </li>
   </ul>
-  <div class="tutorial__post__header__social">
-    {% include layouts/post/social_links.html %}
-  </div>
 </div>
 <div class="tutorial__post__tags">
   <ul class="tutorial__post__tags__list">

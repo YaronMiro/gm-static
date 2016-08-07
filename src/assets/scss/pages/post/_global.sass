@@ -30,20 +30,33 @@
 
 
 .tutorial__post__social
-  display: block
+  position: relative
+  overflow: hidden
   margin: 5em auto -1em
-  padding: 0 1em 1em
-  width: 60%
+  padding: .7em .4em .4em
+  width: 85%
+  color: $grey-medium
   border: 1px solid $mist
   border-radius: .25em
   text-align: center
 
-  +respond-at(650px)
-    display: none
+  &::before
+    content: ""
+    position: absolute
+    z-index: 2
+    top: 0
+    left: 0
+    right: 0
+    height: .28em
+    border-bottom: 1px solid rgba($mist, 0.6)
+    border-radius: .2em .2em 0 0
+    background: $soft
+
 
   .tutorial__post__icons__social
     display: inline-block
 
-.tutorial__post__social__label
+
+.tutorial__post__social__text
   display: block
   margin-bottom: .7em
