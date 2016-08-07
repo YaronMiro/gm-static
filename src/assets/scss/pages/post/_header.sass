@@ -1,5 +1,8 @@
 .tutorial__post__header
-  padding: 0 1.25em
+
+  +respond-at(815px)
+    padding-left: 1.25em
+    padding-right: 1.25em
 
 
 .tutorial__post__header__title
@@ -51,10 +54,13 @@
 .tutorial__post__icons
   +clearfix()
   margin: 8em 0 0
-  padding: 0 1.25em .7em
+  padding-bottom: .7em
   border-bottom: 1px solid $mist
   font-family: $roboto_condensed
 
+  +respond-at(815px)
+    padding-left: 1.25em
+    padding-right: 1.25em
 
 .tutorial__post__icons__info
   margin: 0
@@ -107,12 +113,16 @@
 .tutorial__post__tags
   color: $grey-medium
   margin: .2em 0 0
-  padding: .1em 1.25em 0
+  padding-top: .1em
   font:
     family: $roboto_condensed
     size: .95em
   color: $grey-medium
   line-height: 1.7em
+
+  +respond-at(815px)
+    padding-left: 1.25em
+    padding-right: 1.25em
 
 
 .tutorial__post__tags__list
