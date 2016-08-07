@@ -58,14 +58,11 @@
       &::before
         background-color: $value
 
-
-=add-post-category-icon()
-  @each $name in $categories
-
-    &.tutorial__post__header__category__icon--#{$name}
-      background:
-        image: url("/images/elements/tutorial-thumbnail/#{$name}/large.svg")
-        repeat: no-repeat
+=add-color-classes-slash-separator()
+  @each $name, $value in $colors
+    &.c--#{$name}
+      &:not(:last-child)::after
+        color: $value
 
 
 =add-global--color-classes()
@@ -78,6 +75,12 @@
   @each $name, $value in $colors
     &.c--#{$name}
       border-color: rgba($value, .5)
+
+
+=add-global--bg-color-classes()
+  @each $name, $value in $colors
+    &.bg--#{$name}
+      background-color: $value
 
 
 =add-global--bg-color-classes()
@@ -135,3 +138,22 @@
 .link-arrow
   &::after
     content: " >>"
+
+.category-style
+  display: inline-block
+  padding: .25em .55em .55em
+  line-height: .6em
+  border: 1px solid
+  border-radius: .185em
+  text-align: center
+  background-color: $white
+  +add-global--category-border-color-classes()
+
+
+.link-with-round-border-style
+  padding: 0 .5em .25em
+  border: 1px solid
+  border-radius: .185em
+  text-decoration: none
+  line-height: 1.3em
+  font-size: 1.05em

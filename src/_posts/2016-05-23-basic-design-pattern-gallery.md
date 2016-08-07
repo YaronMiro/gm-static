@@ -8,6 +8,9 @@ tags:
 - App Design
 - Gallery
 - View Collection
+- Static
+- Design Pattern
+- Factory
 permalink: /content/basic-design-pattern-gallery/
 author: "Gabriel Miro"
 ---

@@ -21,7 +21,7 @@
       background-color: rgba($mist, 0.11)
 
     .tutorials__list__item__info__title
-     text-decoration: underline
+     color: rgba($grey-dark, .9)
 
     .tutorials__list__item__thumbnail__wrapper
       opacity: .7
@@ -83,7 +83,7 @@
 
 
 .tutorials__list__item__info__date
-  margin: .75em 0 0 1.3em
+  margin: .4em 0 0 1.3em
   color: rgba($grey-light, 0.8)
   font-family: $roboto_condensed
   font-size: 1em
@@ -134,16 +134,9 @@
 
 
 .tutorials__list__item__icons__item__category
-  display: inline-block
+  @extend .category-style
   margin-top: 0.4em
-  padding: .25em .55em .55em
-  line-height: .6em
   font-family: $catamaran
-  border: 1px solid
-  border-radius: .185em
-  text-align: center
-  background-color: $white
-  +add-global--category-border-color-classes()
 
 
 

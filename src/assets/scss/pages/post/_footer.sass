@@ -1,6 +1,6 @@
 .tutorial__post__footer
   margin-top: 5em
-  padding: 1.1em 1em
+  padding: 1em
   border-top: 1px solid $mist
   border-bottom: 1px solid $mist
   color: $grey-medium
@@ -22,6 +22,7 @@
   +respond-at(940px)
     float: left
     margin: .7em 1.5em 0 0
+
 
 .tutorial__post__footer__avatar
   display: block
@@ -65,10 +66,5 @@
 
 .tutorial__post__footer__author__link
   display: inline-block
-  padding: 0 .5em .25em
-  border: 1px solid
-  border-radius: .185em
-  text-decoration: none
-  line-height: 1.3em
-  font-size: 1.05em
+  @extend .link-with-round-border-style
   +add-global--category-border-color-classes()

@@ -5,99 +5,22 @@ post: true
 {% capture main_post_category %}{{ page.category | downcase | replace_first: ' ', '-' }}{% endcapture %}
 {% capture skill_level %}{{ site.data.settings.skill[page.skill] }}{% endcapture %}
 {% capture category_color %}{{ site.data.settings.categories[page.category] }}{% endcapture %}
+
+<!-- Header -->
+{% include layouts/post/header.html %}
 <div class="tutorial__post tutorial__post--{{ main_post_category }}">
-  <header class="tutorial__post__header">
-    <img class="tutorial__post__header__category__icon" src="/images/elements/posts/{{ main_post_category }}/icon.svg" alt=""/>
-    <h1 class="tutorial__post__header__title c--{{ category_color }}">{{ page.title }}</h1>
-    <div class="tutorial__post__header__info">
-      <span class="tutorial__post__header__info__text">Published {{ page.date | date: "%b %-d, %Y" }}</span>
-      <span class="tutorial__post__header__info__text">By <a class="tutorial__post__header__info__text__link" href="/about">{{ page.author }}</a></span>
-    </div>
-  </header>
-  <div class="tutorial__post__icons">
-    <ul class="tutorial__post__icons__info">
-      <li class="tutorial__post__icons__item">
-      <span class="tutorial__post__icons__item__category c--{{ category_color }}">{{ page.category }}</span>
-      </li>
-      <li class="tutorial__post__icons__item">
-        <img class="tutorial__post__icons__item__icon" src="/images/elements/{{ page.type }}-icon.svg" alt="Tutorial type {{ page.type }} icon"/>
-        <span class="tutorial__post__icons__item__text">{{ page.type | capitalize }}</span>
-      </li>
-      <li class="tutorial__post__icons__item">
-        <img class="tutorial__post__icons__item__icon" src="/images/elements/skill-{{ skill_level }}.svg" alt="Tutorial skill level-{{ page.skill }} icon"/>
-        <span class="tutorial__post__icons__item__text tutorial__post__icons__item__text--skill">{{ page.skill | capitalize }}</span>
-      </li>
-    </ul>
-    <ul class="tutorial__post__icons__social">
-      <li class="tutorial__post__icons__social__item">
-        <a class="tutorial__post__icons__social__item__link" href="#twitter">
-          <img class="tutorial__post__icons__social__item__icon" src="/images/elements/twitter-dark.svg" alt="Share tutorial on twitter icon"/>
-        </a>
-      </li>
-      <li class="tutorial__post__icons__social__item">
-        <a class="tutorial__post__icons__social__item__link" href="#facebook">
-          <img class="tutorial__post__icons__social__item__icon" src="/images/elements/facebook-dark.svg" alt="Share tutorial on facebook icon"/>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="tutorial__post__tags">
-    <img class="tutorial__post__tags__icon" src="/images/elements/tag-icon.svg" alt="Tags list icon"/>
-    <ul class="tutorial__post__tags__list">
-      {% for tag in page.tags %}
-      <li class="tutorial__post__tags__list__item">
-        <a class="tutorial__post__tags__list__item__link" href="/#">{{ tag }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
   <div class="tutorial__post__wrapper">
     <!-- Tutorial content -->
     <section class="tutorial__post__content">{{ content }}</section>
     <!-- Footer -->
-    <footer class="tutorial__post__footer">
-      <div class="tutorial__post__footer__author__wrapper">
-        <div class="tutorial__post__footer__avatar__wrapper">
-          <img class="tutorial__post__footer__avatar" src="/images/gabiriel-miro-avatar.jpg" alt="Gabriel Miro Avatar" title="Gabriel Miro Avatar"/>
-        </div>
-        <div class="tutorial__post__footer__info">
-          <h4 class="tutorial__post__footer__info__author__name c--{{ category_color }}">{{ page.author }}</h4>
-          <p class="tutorial__post__footer__info__author__slogan">
-            I am an accomplished programmer, development manager, educator, speaker with over 40 years of experience.
-          </p>
-        </div>
-      </div>
-      <div class="tutorial__post__footer__author__link__wrapper">
-        <a class="tutorial__post__footer__author__link c--{{ category_color }}" href="/about">About me</a>
-      </div>
-    </footer>
+    {% include layouts/post/footer.html %}
+    <!-- Social links small devices -->
+    <div class="tutorial__post__social">
+      <span class="tutorial__post__social__label">Share this tutorial</span>
+      {% include layouts/post/social_links.html %}
+    </div>
     <!-- Recent posts -->
-    <section class="tutorial__post__recent__tutorials">
-      <h4 class="tutorial__post__recent__tutorials__title c--{{ category_color }}">Recent {{ page.category }} Tutorials</h4>
-      <a class="tutorial__post__recent__tutorials__header-link" href="/tutorials">See all Tutorials</a>
-      <ul class="tutorial__post__recent__tutorials__list">
-        {% for post in site.posts %}
-          {% capture main_post_category %}{{ post.category | downcase | replace_first: ' ', '-' }}{% endcapture %}
-        {% if post.category == page.category and post.title != page.title %}
-          <li class="tutorial__post__recent__tutorials__list__item clearfix">
-            <a class="tutorial__post__recent__tutorials__list__item__link" href="{{ post.url }}">
-              <div class="tutorial__post__recent__tutorials__list__item__text">
-                <h5 class="tutorial__post__recent__tutorials__list__item__title box--{{ category_color }}">{{ post.title }}</h5>
-                <div class="tutorial__post__recent__tutorials__list__item__info">
-                  <span class="tutorial__post__recent__tutorials__list__item__info__type">{{ post.type | capitalize }}</span>
-                  <span class="tutorial__post__recent__tutorials__list__item__info__date"> Published {{ post.date | date: "%b %-d, %Y" }}</span>
-                </div>
-              </div>
-              <div class="tutorial__post__recent__tutorials__list__item_icon_wrapper">
-                <img class="tutorial__post__recent__tutorials__list__item_icon" src="/images/elements/{{ post.type }}-icon.svg" alt="Tutorial type {{ post.type }} icon" title="Tutorial type - {{ post.type }}"/>
-              </div>
-            </a>
-          </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-      <a class="tutorial__post__recent__tutorials__link c--{{ category_color }}" href="/tutorials">See All Tutorials</a>
-    </section>
+    {% include layouts/post/recent_posts.html %}
   </div>
 </div>
 

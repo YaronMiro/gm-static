@@ -1,0 +1,49 @@
+.tutorial__post__wrapper
+  margin: 0 auto
+
+  +respond-at(815px)
+    width: 85%
+
+
+.tutorial__post__icons__social
+  margin: 0
+  padding: 0
+  list-style: none
+
+
+.tutorial__post__icons__social__item
+  line-height: .85em
+  float: left
+  +right-border-separator()
+
+
+.tutorial__post__icons__social__item__link
+  display: inline-block
+  padding: .2em .65em .15em
+  border: 1px solid $mist
+  border-radius: .185em
+  opacity: .85
+
+
+.tutorial__post__icons__social__item__icon
+  width: .9em
+
+
+.tutorial__post__social
+  display: block
+  margin: 5em auto -1em
+  padding: 0 1em 1em
+  width: 60%
+  border: 1px solid $mist
+  border-radius: .25em
+  text-align: center
+
+  +respond-at(650px)
+    display: none
+
+  .tutorial__post__icons__social
+    display: inline-block
+
+.tutorial__post__social__label
+  display: block
+  margin-bottom: .7em
