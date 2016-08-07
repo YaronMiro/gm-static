@@ -14,3 +14,4 @@ tags:
 permalink: /content/basic-design-pattern-gallery/
 author: "Gabriel Miro"
 ---
+{% include components/post_content.md %}

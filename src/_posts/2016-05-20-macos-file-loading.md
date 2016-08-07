@@ -10,3 +10,4 @@ tags:
 permalink: /content/macos-file-loading/
 author: "Gabriel Miro"
 ---
+{% include components/post_content.md %}

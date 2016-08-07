@@ -8,10 +8,10 @@ post: true
 
 <!-- Header -->
 {% include layouts/post/header.html %}
-<div class="tutorial__post tutorial__post--{{ main_post_category }}">
+<div class="tutorial__post">
   <div class="tutorial__post__wrapper">
     <!-- Tutorial content -->
-    <section class="tutorial__post__content">{{ content }}</section>
+    <section class="tutorial__post__content tutorial__post--{{ main_post_category }}">{{ content }}</section>
     <!-- Footer -->
     {% include layouts/post/footer.html %}
     <!-- Social links small devices -->

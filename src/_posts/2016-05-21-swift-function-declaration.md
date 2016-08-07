@@ -11,3 +11,4 @@ tags:
 permalink: /content/swift-function-declaration/
 author: "Gabriel Miro"
 ---
+{% include components/post_content.md %}

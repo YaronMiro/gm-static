@@ -9,3 +9,4 @@ tags:
 permalink: /content/swift-generics/
 author: "Gabriel Miro"
 ---
+{% include components/post_content.md %}

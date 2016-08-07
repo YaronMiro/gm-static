@@ -11,3 +11,4 @@ tags:
 permalink: /content/ios-and-macos-abstract-factory-pattern/
 author: "Gabriel Miro"
 ---
+{% include components/post_content.md %}

@@ -11,3 +11,4 @@ tags:
 permalink: /content/swift-advanced-switch/
 author: "Gabriel Miro"
 ---
+{% include components/post_content.md %}

@@ -9,3 +9,4 @@ tags:
 permalink: /content/app-structural-pattern/
 author: "Gabriel Miro"
 ---
+{% include components/post_content.md %}

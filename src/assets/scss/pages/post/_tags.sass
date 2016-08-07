@@ -3,7 +3,8 @@
   p
     margin-top: 0
     margin-bottom: 1.4em
-    line-height: 1.5em
+    font-weight: $weight-light
+    line-height: 1.55em
 
   strong
     color: $grey-dark
@@ -11,5 +12,39 @@
 
   h2
     margin-top: 2em
-    margin-bottom: 0
-    //line-height: 1.5em
+    margin-bottom: .25em
+    line-height: 1.3em
+    color: rgba($grey-dark, .9)
+
+
+  code
+    display: inline-block
+    margin-left: .2em
+    margin-right: .2em
+    padding: .1em .5em
+    border-radius: .2em
+    font:
+      family: $monospace
+      weight: $weight-thin
+    background-color: rgba($grey-light, .07)
+
+
+  ul
+    list-style: none
+    margin: 1em 0
+    padding-left: 1em
+
+    li
+      position: relative
+      padding-left: 1em
+
+      &::before
+        content: ""
+        position: absolute
+        width: .4em
+        height: .4em
+        top: .65em
+        left: 0
+        background-color: $grey-medium
+
+  +add-global-tags-color()

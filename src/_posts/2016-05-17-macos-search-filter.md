@@ -10,3 +10,4 @@ tags:
 permalink: /content/macos-search-filter/
 author: "Gabriel Miro"
 ---
+{% include components/post_content.md %}

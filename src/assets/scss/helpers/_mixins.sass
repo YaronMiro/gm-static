@@ -58,6 +58,7 @@
       &::before
         background-color: $value
 
+
 =add-color-classes-slash-separator()
   @each $name, $value in $colors
     &.c--#{$name}
@@ -69,6 +70,17 @@
   @each $name, $value in $colors
     &.c--#{$name}
       color: $value
+
+
+=add-global-tags-color()
+  @each $category, $color in $categories
+    &.tutorial__post--#{$category}
+
+      code
+        color: $color
+
+      ul li::before
+        background-color: $color
 
 
 =add-global--category-border-color-classes()

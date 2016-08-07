@@ -11,3 +11,4 @@ tags:
 permalink: /content/swift-class-extension/
 author: "Gabriel Miro"
 ---
+{% include components/post_content.md %}

@@ -10,3 +10,4 @@ tags:
 permalink: /content/ios-mapkit/
 author: "Gabriel Miro"
 ---
+{% include components/post_content.md %}

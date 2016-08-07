@@ -9,3 +9,4 @@ tags:
 permalink: /content/xcode-fundamentals/
 author: "Gabriel Miro"
 ---
+{% include components/post_content.md %}

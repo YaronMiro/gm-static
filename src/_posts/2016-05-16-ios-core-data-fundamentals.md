@@ -9,3 +9,4 @@ tags:
 permalink: /content/ios-core-data-fundamentals/
 author: "Gabriel Miro"
 ---
+{% include components/post_content.md %}
