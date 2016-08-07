@@ -18,15 +18,22 @@
 
 
   code
-    display: inline-block
-    margin-left: .2em
-    margin-right: .2em
-    padding: .1em .5em
     border-radius: .2em
     font:
       family: $monospace
       weight: $weight-thin
     background-color: rgba($grey-light, .07)
+
+
+    &.snippet__base-code
+      display: inline-block
+      margin-left: .2em
+      margin-right: .2em
+      padding: .1em .5em
+
+    &.swift
+      padding: 1.5em
+      border-radius: .25em
 
 
   ul

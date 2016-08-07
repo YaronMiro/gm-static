@@ -15,9 +15,21 @@ and if you don’t … well there is absolutely nothing I can do about it. Serio
 
 ## The Default Syntax
 
+<pre><code class="swift">func totalPaidForItemWithName(name: String,
+               withItemPrice price: Double,
+        numberOfItemsOrdered count: Int) -> String {
+
+    let total = price * Double(count)
+    return("\(name) \(count)*\(price) $\(total)")
+}
+
+print(totalPaidForItemWithName(
+    "Books", withItemPrice: 10.99, numberOfItemsOrdered: 5))
+</code></pre>
+
 The function above has three parameters, and called from the  print statement returns the following string:
 
-```Books   5*10.99   $54.95```
+<code class="snippet__base-code">Books   5*10.99   $54.95</code>
 
 Some sites are doing a great job, but most fail to follow up with the frequent changes and the tons of new stuff introduced by Apple on a regular basis.
 For the very same reason, I believe that most printed books covering computer technology in general, are out of date by the time they leave the print shop.
@@ -26,7 +38,8 @@ Function parameters will always have a **local name** and optionally an **extern
 
 The **local name** is for use within the function’s body (like in other languages). In the example above the local names are name, price and count.
 
-The **external name** is used to label arguments passed to a function call. In the example above the external names are ```withItemPrice``` and ```numberOfItemsOrdered```.
+The **external name** is used to label arguments passed to a function call. In the example above the external names are
+<code class="snippet__base-code">withItemPrice</code> and <code class="snippet__base-code">numberOfItemsOrdered</code>.
 As you can see the first parameter does NOT have an external name, and accordingly in the function call “Books” is not preceded by a label.
 
 To summarize the default syntax:

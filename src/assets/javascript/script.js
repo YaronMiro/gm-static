@@ -28,6 +28,17 @@ function testBrowser() {
 }
 
 /**
+ * Adding the capability highlight code snippet.
+ * https://highlightjs.org/
+ */
+function initHighLightJs() {
+  $('code.swift').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+
+}
+
+/**
  * Adding the capability to hide/show dropdown menu.
  *
  */
@@ -161,6 +172,7 @@ $(document).ready(function() {
   $(document).on("afterHideCollapseEvent", rollBackToDeafultNarrowMenu);
   $(document).on("afterShowCollapseEvent", rollBackToDeafultNarrowMenu);
   initFloatLabel('floatl__js')
+  initHighLightJs()
 });
 
 
