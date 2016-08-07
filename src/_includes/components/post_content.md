@@ -15,17 +15,22 @@ and if you don’t … well there is absolutely nothing I can do about it. Serio
 
 ## The Default Syntax
 
-<pre><code class="swift">func totalPaidForItemWithName(name: String,
-               withItemPrice price: Double,
-        numberOfItemsOrdered count: Int) -> String {
+<pre>
+  <code class="swift">
+  func totalPaidForItemWithName(
+     name: String,
+     withItemPrice price: Double,
+     numberOfItemsOrdered count: Int) -> String {
 
-    let total = price * Double(count)
-    return("\(name) \(count)*\(price) $\(total)")
-}
+     let total = price * Double(count)
+     return("\(name) \(count)*\(price) $\(total)")
+  }
 
-print(totalPaidForItemWithName(
-    "Books", withItemPrice: 10.99, numberOfItemsOrdered: 5))
-</code></pre>
+  print(
+     totalPaidForItemWithName("Books", withItemPrice: 10.99, numberOfItemsOrdered: 5)
+  )
+  </code>
+</pre>
 
 The function above has three parameters, and called from the  print statement returns the following string:
 
@@ -60,9 +65,24 @@ This is the syntax recommended by Apple and it is widely used in its APIs.
 **Note:** In case you are concerned about the amount of typing you have to do in view of this verbosity, Xcode’s autocomplete comes to your rescue.
 When you write a function call you select the relevant template suggested by autocomplete and you only need to tab through the template to fill in the parameter values.
 
+![Xcode Autocomplete in action](/images/post/image-post-1.jpg "Xcode Autocomplete in action")
+
 However you might deviate from this default syntax in the functions you write. Following you will find some typical scenarios
 
 ## I want to use the same term for the local and external names
+
+<pre>
+  <code class="swift">
+  func totalPaidForItemWithName(
+     name: String,
+     price: Double,
+     count: Int) -> String {
+
+     let total = price * Double(count)
+     return("\(name)   \(count)*\(price)   $\(total)")
+  }
+  </code>
+</pre>
 
 For the second and subsequent parameter you just omit the external name from the functions definition,
 the local name automatically becomes the external name as well, which you must specify as the label in the function call.
@@ -71,10 +91,61 @@ the local name automatically becomes the external name as well, which you must s
 
 There should be a very good reason to do this, but you are the boss and you should know better.
 
+<pre>
+  <code class="swift">
+  func totalPaidForItemWithName(
+     externalName name: String,
+     price: Double,
+     count: Int) -> String {
+
+     let total = price * Double(count)
+     return("\(name)   \(count)*\(price)   $\(total)")
+  }
+
+  print(
+     totalPaidForItemWithName(externalName: "Books", price: 10.99, count: 5)
+  )
+  </code>
+</pre>
+
 You just add an external name in the function’s definition, which of course you must specify as a label in the function call.
 When you want to use the same term for the local and external names of the first parameter you just an external name with the same value as the local name
 
+<pre>
+  <code class="swift">
+  func totalPaidForItemWithName(
+     name name: String,
+     price: Double,
+     count: Int) -> String {
+
+     let total = price * Double(count)
+     return("\(name)   \(count)*\(price)   $\(total)")
+  }
+
+  print(
+     totalPaidForItemWithName(name: "Books", price: 10.99, count: 5)
+  )
+  </code>
+</pre>
+
 ## I want to omit external names for the second or any subsequent parameter
+
+<pre>
+  <code class="swift">
+  func totalPaidForItemWithName(
+     name: String,
+     _ price: Double,
+     _ count: Int) -> String {
+
+     let total = price * Double(count)
+     return("\(name)   \(count)*\(price)   $\(total)")
+  }
+
+  print(
+     totalPaidForItemWithName("Books", 10.99, 5)
+  )
+  </code>
+</pre>
 
 ## The name of a Function
 
@@ -82,5 +153,19 @@ The name of a function is the combination of the function name (the name that pr
 followed by the external names of all its parameters separated by “:” inside parentheses. When a parameter does not have an external name, you use an “_” instead.
 
 So taking all the examples above the function names (corresponding to the order they appear) are as follows:
+
+<pre>
+  <code class="swift">
+  totalPaidForItemWithName(_:withItemPrice:numberOfItemsOrdered)
+
+  totalPaidForItemWithName(_:price:count:)
+
+  totalPaidForItemWithName(externalName:price:count:)
+
+  totalPaidForItemWithName(name:price:count:)
+
+  totalPaidForItemWithName(_:_:_:)
+  </code>
+</pre>
 
 You will see this notation in Apple’s documentation and in Xcode when you open the methods drop down menu at the top of an Editor pane:

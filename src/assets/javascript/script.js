@@ -39,6 +39,19 @@ function initHighLightJs() {
 }
 
 /**
+ * Adding the capability to have a fancy scrollbar cross-browser.
+ * http://manos.malihu.gr/jquery-custom-content-scroller/
+ * https://github.com/malihu/malihu-custom-scrollbar-plugin
+ */
+function initJqueryScrollbar() {
+  var settings = {
+    axis:"x"
+//    autoHideScrollbar: false
+  }
+  $('.scrollbar__fancy').mCustomScrollbar(settings);
+}
+
+/**
  * Adding the capability to hide/show dropdown menu.
  *
  */
