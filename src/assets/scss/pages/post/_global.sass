@@ -5,40 +5,33 @@
     width: 85%
 
 
-.tutorial__post__icons__social
+.tutorial__post__social
+  margin: 3.5em auto -1em
+  color: $grey-medium
+  text-align: center
+
+
+  +respond-at(670px)
+    width: 60%
+
+
+.tutorial__post__social__label
+  display: block
+  margin-bottom: .7em
+  font-size: 1.1em
+
+
+.tutorial__post__social__icons
+  display: block
+  list-style: none
   margin: 0
   padding: 0
-  list-style: none
-
-
-.tutorial__post__icons__social__item
-  line-height: .85em
-  float: left
-  +right-border-separator()
-
-
-.tutorial__post__icons__social__item__link
-  display: inline-block
-  padding: .2em .65em .15em
+  height: 4em
   border: 1px solid $mist
   border-radius: .185em
-  opacity: .85
 
-
-.tutorial__post__icons__social__item__icon
-  width: .9em
-
-
-.tutorial__post__social
   position: relative
   overflow: hidden
-  margin: 5em auto -1em
-  padding: .7em .4em .4em
-  width: 85%
-  color: $grey-medium
-  border: 1px solid $mist
-  border-radius: .25em
-  text-align: center
 
   &::before
     content: ""
@@ -53,10 +46,30 @@
     background: $soft
 
 
-  .tutorial__post__icons__social
-    display: inline-block
+.tutorial__post__social__icons__item
+  line-height: .85em
+  float: left
+  width: 33.3333%
+  height: 100%
+  padding-top: 1.05em
+
+  &:not(:last-child)
+    border-right: 1px solid rgba($grey-light, .25)
 
 
-.tutorial__post__social__text
+.tutorial__post__social__icons__item__link
   display: block
-  margin-bottom: .7em
+  text-decoration: none
+  color: inherit
+
+
+.tutorial__post__social__icons__item__icon
+  width: 1em
+  opacity: .8
+
+
+.tutorial__post__social__icons__item__text
+  margin-top: .2em
+  display: block
+
+
