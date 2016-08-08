@@ -38,18 +38,6 @@ function initHighLightJs() {
 
 }
 
-/**
- * Adding the capability to have a fancy scrollbar cross-browser.
- * http://manos.malihu.gr/jquery-custom-content-scroller/
- * https://github.com/malihu/malihu-custom-scrollbar-plugin
- */
-function initJqueryScrollbar() {
-  var settings = {
-    axis:"x"
-//    autoHideScrollbar: false
-  }
-  $('.scrollbar__fancy').mCustomScrollbar(settings);
-}
 
 /**
  * Adding the capability to copy the "<pre>" tag content into
@@ -69,19 +57,23 @@ function initCopyToClipboard() {
 
   // Iterating all of the "<pre>" elements ad adding the "copy" button.
   $.each($pre, function(index, value) {
-    // Create the "<button>" nelement with a unique class and inner text.
+    // Create the "<button>" element with a unique class and inner text.
     var buttonElement = document.createElement('button');
-    var $button = $(buttonElement).addClass('copy__code__snippet').text('copy')
+    var $button = $(buttonElement).addClass('copy__code__snippet').text('copy');
+    // Create the "wrapper" element for the button for styling purposes.
+    var buttonElementWrapper = document.createElement('div');
+    var $buttonWrapper = $(buttonElementWrapper).addClass('copy__code__snippet__wrapper');
+    $buttonWrapper.prepend($button)
 
     // Inject the button into the "<pre>" element.
-    $($pre[index]).append($button);
+    $($pre[index]).prepend($buttonWrapper);
   });
 
   // Setup the copy to cliboard object.
   var copyCode = new Clipboard('.copy__code__snippet', {
     target: function(trigger) {
       // Return the target "<code>" element to copy from it's context,
-      return $(trigger).parent('pre.snippet').find('code').get(0);
+      return $(trigger).parents('pre.snippet').find('code').get(0);
     }
   });
 
@@ -95,11 +87,11 @@ function initCopyToClipboard() {
 
     var $trigger = $(event.trigger);
     // Acknowledge  the user that the text has been copied.
-    $trigger.addClass('copy__code__snippet--success').text('copied')
+    $trigger.addClass('copy__code__snippet--success').text('copied');
 
     // Reset the button class and inner text.
     window.setTimeout(function() {
-      $trigger.removeClass('copy__code__snippet--success').text('copy')
+      $trigger.removeClass('copy__code__snippet--success').text('copy');
     }, 450);
   });
 
@@ -108,11 +100,11 @@ function initCopyToClipboard() {
 
     var $trigger = $(event.trigger);
     // Acknowledge  the user that the text has not been copied!.
-    $trigger.addClass('copy__code__snippet--error').text('no support :(')
+    $trigger.addClass('copy__code__snippet--error').text('no support :(');
 
     // Reset the button class and inner text.
     window.setTimeout(function() {
-      $trigger.removeClass('copy__code__snippet--error').text('copy')
+      $trigger.removeClass('copy__code__snippet--error').text('copy');
     }, 2000);
   });
 

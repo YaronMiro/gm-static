@@ -22,7 +22,7 @@
   pre
     position: relative
     margin: 1.4em 0 0
-    padding: 2em 0 .35em
+    padding: .35em 0
     border: 1px solid $mist
     border-radius: .2em
     line-height: 0
@@ -70,14 +70,15 @@
    border: 1px solid $soft-border
    border-radius: .2em
 
+  .copy__code__snippet__wrapper
+    text-align: right
+
   .copy__code__snippet
     +reset-button-style()
-    position: absolute
-    display: block
-    top: .5em
-    right: .5em
+    display: inline-block
     height: 2em
     min-width: 5.5em
+    margin: 0 .5em .5em 0
     padding: 0 .8em
     color: rgba($grey-medium, .7)
     font-size: .9rem
