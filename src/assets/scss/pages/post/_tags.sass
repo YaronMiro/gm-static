@@ -21,25 +21,29 @@
 
   pre
     position: relative
-    margin: 2.4em 0 0
+    margin: 1.4em 0 0
+    padding: 2em 0 .35em
+    border: .1px solid rgba($mist, .4)
+    border-radius: .2em
     line-height: 0
+    background-color: rgba($grey-light, .07)
 
 
   code
-    border: .1px solid rgba($mist, .4)
-    border-radius: .22em
+    border: .1px solid rgba($mist, .6)
+    border-left: 0
+    border-right: 0
     font:
       family: $monospace
       weight: $weight-thin
-    background-color: rgba($grey-light, .07)
     line-height: 1.5em
-
 
     &.snippet__base-code
       display: inline-block
+      margin: 0 .35em
       padding: .35em .35em
+      border: .1px solid rgba($mist, .55)
       line-height: 1em
-
 
     &.swift
       padding: .3em 0 0
@@ -73,20 +77,24 @@
     +reset-button-style()
     position: absolute
     display: block
-    top: -.7em
-    right: 1em
+    top: .5em
+    right: .5em
     height: 2em
     width: 4.5em
     color: $white
     font-size: .9rem
-    border-radius: .185em
-    background: $grey-medium
+    border-radius: .165em
+    background: rgba($grey-medium, 0.65)
     font-family: $monospace
     line-height: .5em
-    transition: background-color .2s ease-out
+    transition: background-color .2s ease-out, color .2s ease-out
+
+    &:hover
+      background: rgba($grey-medium, 0.9)
 
     &.copy__code__snippet--success
-      background: $grey-dark
+      color: $success
+      background: darken($grey-medium, 10%)
 
 
   // Adding style color change by category main color.

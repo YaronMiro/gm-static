@@ -85,7 +85,7 @@ function initCopyToClipboard() {
     // Clear the snippet text selection.
     window.setTimeout(function() {
       event.clearSelection();
-    }, 350)
+    }, 450)
 
     var $trigger = $(event.trigger);
     // Acknowledge  the user that the text has been copied.
@@ -94,7 +94,7 @@ function initCopyToClipboard() {
     // Reset the button class and inner text.
     window.setTimeout(function() {
       $trigger.removeClass('copy__code__snippet--success').text('copy')
-    }, 400);
+    }, 450);
   });
 
 }
