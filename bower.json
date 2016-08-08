@@ -6,8 +6,6 @@
     "jquery": "^3.1.0",
     "floatl": "^0.3.0",
     "highlightjs": "^9.5.0",
-    "malihu-custom-scrollbar-plugin": "^3.1.5",
-    "clipboard": "^1.5.12",
-    "SyntaxHighlighter": "^3.0.83"
+    "clipboard": "^1.5.12"
   }
 }
