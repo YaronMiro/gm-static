@@ -80,7 +80,8 @@
     top: .5em
     right: .5em
     height: 2em
-    width: 4.5em
+    min-width: 5.5em
+    padding: 0 .8em
     color: $white
     font-size: .9rem
     border-radius: .165em
@@ -94,6 +95,10 @@
 
     &.copy__code__snippet--success
       color: $success
+      background: darken($grey-medium, 10%)
+
+    &.copy__code__snippet--error
+      color: $error
       background: darken($grey-medium, 10%)
 
 

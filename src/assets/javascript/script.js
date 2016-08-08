@@ -97,6 +97,19 @@ function initCopyToClipboard() {
     }, 450);
   });
 
+  copyCode.on('error', function(event) {
+    event.trigger.textContent = '';
+
+    var $trigger = $(event.trigger);
+    // Acknowledge  the user that the text has not been copied!.
+    $trigger.addClass('copy__code__snippet--error').text('no support :(')
+
+    // Reset the button class and inner text.
+    window.setTimeout(function() {
+      $trigger.removeClass('copy__code__snippet--error').text('copy')
+    }, 2000);
+  });
+
 }
 
 /**
