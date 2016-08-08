@@ -58,6 +58,12 @@ function initJqueryScrollbar() {
  */
 function initCopyToClipboard() {
 
+  // Return early in case there is no support for
+  // selecting the tex and copying it.
+  if (!document.queryCommandSupported('SelectAll') || !document.queryCommandSupported('copy')) {
+    return;
+  }
+
   // Getting the target "<pre>".
   var $pre = $('pre.snippet')
 

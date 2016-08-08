@@ -23,14 +23,14 @@
     position: relative
     margin: 1.4em 0 0
     padding: 2em 0 .35em
-    border: .1px solid rgba($mist, .65)
+    border: 1px solid $mist
     border-radius: .2em
     line-height: 0
     background-color: $soft
 
 
   code
-    border: .1px solid rgba($mist, .65)
+    border: 1px solid $soft-border
     border-left: 0
     border-right: 0
     font:
@@ -41,20 +41,16 @@
     &.snippet__base-code
       display: inline-block
       margin: 0 .35em
-      padding: .35em .35em
-      border: 1px solid rgba($mist, .65)
+      padding: .35em
+      border: 1px solid $soft-border
       border-radius: .2em
+      background-color: $soft
       line-height: 1em
-
-    &.swift
-      padding: .3em 0 0
-      border-radius: .25em
-
 
   ul
     list-style: none
     margin: 1em 0
-    padding-left: 1em
+    padding-left: 0
 
     li
       position: relative
@@ -63,15 +59,15 @@
       &::before
         content: ""
         position: absolute
-        width: .4em
-        height: .4em
-        top: .65em
+        width: .38em
+        height: .38em
+        top: .75em
         left: 0
         background-color: $grey-medium
 
   img
    max-width: 100%
-   border: 1px solid rgba($mist, .65)
+   border: 1px solid $soft-border
    border-radius: .2em
 
   .copy__code__snippet
@@ -83,24 +79,25 @@
     height: 2em
     min-width: 5.5em
     padding: 0 .8em
-    color: $white
+    color: rgba($grey-medium, .7)
     font-size: .9rem
     border-radius: .165em
-    background: rgba($grey-medium, 0.65)
+    border: 1px solid rgba($grey-medium, .2)
     font-family: $monospace
     line-height: .5em
     transition: background-color .2s ease-out, color .2s ease-out
 
     &:hover
-      background: rgba($grey-medium, 0.9)
+      color: $grey-medium
+      background: rgba($grey-medium, .25)
 
     &.copy__code__snippet--success
       color: $success
-      background: darken($grey-medium, 10%)
+      background: $grey-medium
 
     &.copy__code__snippet--error
       color: $error
-      background: darken($grey-medium, 10%)
+      background: $grey-medium
 
 
   // Adding style color change by category main color.
