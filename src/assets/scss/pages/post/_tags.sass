@@ -1,14 +1,16 @@
 .tutorial__post__content
 
   p
-    margin-top: 0
-    margin-bottom: 1.4em
+    margin-bottom: 0
+    margin-top: 1.4em
     font-weight: $weight-light
-    line-height: 1.55em
+    line-height: 1.6em
+
 
   strong
     color: $grey-dark
     font-weight: $weight-medium
+
 
   h2
     margin-top: 2em
@@ -17,22 +19,30 @@
     color: rgba($grey-dark, .9)
 
 
+  pre
+    position: relative
+    margin: 2.4em 0 0
+    line-height: 0
+
+
   code
-    border-radius: .2em
+    border: .1px solid rgba($mist, .4)
+    border-radius: .22em
     font:
       family: $monospace
       weight: $weight-thin
     background-color: rgba($grey-light, .07)
+    line-height: 1.5em
 
 
     &.snippet__base-code
       display: inline-block
-      margin-left: .2em
-      margin-right: .2em
-      padding: .1em .5em
+      padding: .35em .35em
+      line-height: 1em
+
 
     &.swift
-      padding: 1.5em
+      padding: .3em 0 0
       border-radius: .25em
 
 
@@ -54,4 +64,30 @@
         left: 0
         background-color: $grey-medium
 
+  img
+   max-width: 100%
+   border: 1px solid $mist
+   border-radius: .2em
+
+  .copy__code__snippet
+    +reset-button-style()
+    position: absolute
+    display: block
+    top: -.7em
+    right: 1em
+    height: 2em
+    width: 4.5em
+    color: $white
+    font-size: .9rem
+    border-radius: .185em
+    background: $grey-medium
+    font-family: $monospace
+    line-height: .5em
+    transition: background-color .2s ease-out
+
+    &.copy__code__snippet--success
+      background: $grey-dark
+
+
+  // Adding style color change by category main color.
   +add-global-tags-color()

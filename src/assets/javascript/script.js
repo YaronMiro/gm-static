@@ -52,6 +52,54 @@ function initJqueryScrollbar() {
 }
 
 /**
+ * Adding the capability to copy the "<pre>" tag content into
+ * the clipboard.
+ * https://clipboardjs.com/
+ */
+function initCopyToClipboard() {
+
+  // Getting the target "<pre>".
+  var $pre = $('pre.snippet')
+
+  // Iterating all of the "<pre>" elements ad adding the "copy" button.
+  $.each($pre, function(index, value) {
+    // Create the "<button>" nelement with a unique class and inner text.
+    var buttonElement = document.createElement('button');
+    var $button = $(buttonElement).addClass('copy__code__snippet').text('copy')
+
+    // Inject the button into the "<pre>" element.
+    $($pre[index]).append($button);
+  });
+
+  // Setup the copy to cliboard object.
+  var copyCode = new Clipboard('.copy__code__snippet', {
+    target: function(trigger) {
+      // Return the target "<code>" element to copy from it's context,
+      return $(trigger).parent('pre.snippet').find('code').get(0);
+    }
+  });
+
+  // Alert the user that the text was copied.
+  copyCode.on('success', function(event) {
+
+    // Clear the snippet text selection.
+    window.setTimeout(function() {
+      event.clearSelection();
+    }, 350)
+
+    var $trigger = $(event.trigger);
+    // Acknowledge  the user that the text has been copied.
+    $trigger.addClass('copy__code__snippet--success').text('copied')
+
+    // Reset the button class and inner text.
+    window.setTimeout(function() {
+      $trigger.removeClass('copy__code__snippet--success').text('copy')
+    }, 400);
+  });
+
+}
+
+/**
  * Adding the capability to hide/show dropdown menu.
  *
  */
@@ -186,6 +234,7 @@ $(document).ready(function() {
   $(document).on("afterShowCollapseEvent", rollBackToDeafultNarrowMenu);
   initFloatLabel('floatl__js')
   initHighLightJs()
+  initCopyToClipboard()
 });
 
 

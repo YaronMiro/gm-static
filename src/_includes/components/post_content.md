@@ -15,19 +15,19 @@ and if you don’t … well there is absolutely nothing I can do about it. Serio
 
 ## The Default Syntax
 
-<pre>
+<pre class="snippet">
   <code class="swift">
   func totalPaidForItemWithName(
-     name: String,
-     withItemPrice price: Double,
-     numberOfItemsOrdered count: Int) -> String {
+    name: String,
+    withItemPrice price: Double,
+    numberOfItemsOrdered count: Int) -> String {
 
-     let total = price * Double(count)
-     return("\(name) \(count)*\(price) $\(total)")
+    let total = price * Double(count)
+    return("\(name) \(count)*\(price) $\(total)")
   }
 
   print(
-     totalPaidForItemWithName("Books", withItemPrice: 10.99, numberOfItemsOrdered: 5)
+    totalPaidForItemWithName("Books", withItemPrice: 10.99, numberOfItemsOrdered: 5)
   )
   </code>
 </pre>
@@ -71,7 +71,7 @@ However you might deviate from this default syntax in the functions you write. F
 
 ## I want to use the same term for the local and external names
 
-<pre>
+<pre class="snippet">
   <code class="swift">
   func totalPaidForItemWithName(
      name: String,
@@ -91,7 +91,7 @@ the local name automatically becomes the external name as well, which you must s
 
 There should be a very good reason to do this, but you are the boss and you should know better.
 
-<pre>
+<pre class="snippet">
   <code class="swift">
   func totalPaidForItemWithName(
      externalName name: String,
@@ -111,7 +111,7 @@ There should be a very good reason to do this, but you are the boss and you shou
 You just add an external name in the function’s definition, which of course you must specify as a label in the function call.
 When you want to use the same term for the local and external names of the first parameter you just an external name with the same value as the local name
 
-<pre>
+<pre class="snippet">
   <code class="swift">
   func totalPaidForItemWithName(
      name name: String,
@@ -130,7 +130,7 @@ When you want to use the same term for the local and external names of the first
 
 ## I want to omit external names for the second or any subsequent parameter
 
-<pre>
+<pre class="snippet">
   <code class="swift">
   func totalPaidForItemWithName(
      name: String,
@@ -154,7 +154,7 @@ followed by the external names of all its parameters separated by “:” inside
 
 So taking all the examples above the function names (corresponding to the order they appear) are as follows:
 
-<pre>
+<pre class="snippet">
   <code class="swift">
   totalPaidForItemWithName(_:withItemPrice:numberOfItemsOrdered)
 
