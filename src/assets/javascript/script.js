@@ -59,7 +59,7 @@ function initCopyToClipboard() {
   $.each($pre, function(index, value) {
     // Create the "<button>" element with a unique class and inner text.
     var buttonElement = document.createElement('button');
-    var $button = $(buttonElement).addClass('copy__code__snippet').text('copy');
+    var $button = $(buttonElement).addClass('copy__code__snippet').text('Copy');
     // Create the "wrapper" element for the button for styling purposes.
     var buttonElementWrapper = document.createElement('div');
     var $buttonWrapper = $(buttonElementWrapper).addClass('copy__code__snippet__wrapper');
@@ -87,11 +87,11 @@ function initCopyToClipboard() {
 
     var $trigger = $(event.trigger);
     // Acknowledge  the user that the text has been copied.
-    $trigger.addClass('copy__code__snippet--success').text('copied');
+    $trigger.addClass('copy__code__snippet--success').text('Copied');
 
     // Reset the button class and inner text.
     window.setTimeout(function() {
-      $trigger.removeClass('copy__code__snippet--success').text('copy');
+      $trigger.removeClass('copy__code__snippet--success').text('Copy');
     }, 450);
   });
 
@@ -100,11 +100,11 @@ function initCopyToClipboard() {
 
     var $trigger = $(event.trigger);
     // Acknowledge  the user that the text has not been copied!.
-    $trigger.addClass('copy__code__snippet--error').text('no support :(');
+    $trigger.addClass('copy__code__snippet--error').text('No support :(');
 
     // Reset the button class and inner text.
     window.setTimeout(function() {
-      $trigger.removeClass('copy__code__snippet--error').text('copy');
+      $trigger.removeClass('copy__code__snippet--error').text('Copy');
     }, 2000);
   });
 
