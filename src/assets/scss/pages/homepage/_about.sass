@@ -1,14 +1,19 @@
 .about__homepage
-  margin-top: 4.4em
+  margin-top: 2.4em
   color: $grey-medium
   font-size: 1.17rem
-  line-height: 1.689rem
+  line-height: 1.589rem
   text-align: center
 
+  +respond-at(1000px)
+    margin-top: 4.4em
 
 .about__homepage__avatar
   border-radius: 50%
-  width: 4.3em
+  width: 5em
+
+  +respond-at(1000px)
+    width: 4.3em
 
 
 .about__homepage__me,
@@ -44,3 +49,6 @@
 
 .about__homepage__site
   max-width: 44em
+
+  +respond-at(450px)
+    padding: 0 1.5em

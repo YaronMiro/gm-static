@@ -1,0 +1,33 @@
+<header class="tutorial__post__header">
+  <img class="tutorial__post__header__category__icon" src="/images/elements/posts/{{ main_post_category }}/icon.svg" alt=""/>
+  <h1 class="tutorial__post__header__title c--{{ category_color }}">{{ page.title }}</h1>
+  <div class="tutorial__post__header__info">
+    <span class="tutorial__post__header__info__text">Published {{ page.date | date: "%b %-d, %Y" }}</span>
+    <span class="tutorial__post__header__info__text tutorial__post__header__info__text--name">By <a class="tutorial__post__header__info__text__link" href="/about">{{ page.author }}</a></span>
+  </div>
+  <div class="tutorial__post__header__category c--{{ category_color }}">{{ page.category }}</div>
+</header>
+<div class="tutorial__post__icons">
+  <ul class="tutorial__post__icons__info">
+    <li class="tutorial__post__icons__item">
+      <span class="tutorial__post__icons__item__category c--{{ category_color }}">{{ page.category }}</span>
+    </li>
+    <li class="tutorial__post__icons__item">
+      <img class="tutorial__post__icons__item__icon" src="/images/elements/{{ page.type }}-icon.svg" alt="Tutorial type {{ page.type }} icon"/>
+      <span class="tutorial__post__icons__item__text">{{ page.type | capitalize }}</span>
+    </li>
+    <li class="tutorial__post__icons__item">
+      <img class="tutorial__post__icons__item__icon" src="/images/elements/skill-{{ skill_level }}.svg" alt="Tutorial skill level-{{ page.skill }} icon"/>
+      <span class="tutorial__post__icons__item__text tutorial__post__icons__item__text--skill">{{ page.skill | capitalize }}</span>
+    </li>
+  </ul>
+</div>
+<div class="tutorial__post__tags">
+  <ul class="tutorial__post__tags__list">
+    {% for tag in page.tags %}
+      <li class="tutorial__post__tags__list__item c--{{ category_color }}">
+        <a class="tutorial__post__tags__list__item__link" href="/#">{{ tag }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

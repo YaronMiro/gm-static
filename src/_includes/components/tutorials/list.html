@@ -2,6 +2,10 @@
     <a href="{{ post.url }}" class="tutorials__list__item__link">
       <div class="tutorials__list__item__info">
         <h3 class="tutorials__list__item__info__title box--{{ category_color }}">{{ post.title }}</h3>
+        <div class="tutorials__list__item__info__date">
+          <span class="tutorials__list__item__info__date__type">{{ post.type | capitalize }}</span>
+          <span>Published {{ post.date | date: "%b %-d, %Y" }}</span>
+        </div>
         <ul class="tutorials__list__item__icons">
           <li class="tutorials__list__item__icons__item">
             <span class="tutorials__list__item__icons__item__category c--{{ category_color }}">{{ post.category }}</span>
@@ -15,7 +19,6 @@
             <span class="tutorials__list__item__icons__item__text tutorials__list__item__icons__item__text--skill">{{ post.skill | capitalize }}</span>
           </li>
         </ul>
-         <div class="tutorials__list__item__info__date">Published {{ post.date | date: "%b %-d, %Y" }}</div>
       </div>
       <div class="tutorials__list__item__thumbnail__wrapper">
         <img class="tutorials__list__item__thumbnail" src="/images/elements/posts/{{ main_post_category }}/icon.svg" alt="Tutorial main category icon"/>

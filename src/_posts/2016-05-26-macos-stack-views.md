@@ -1,6 +1,6 @@
 ---
 layout: post
-title: " NSStackView macOS Tutorial"
+title: "NSStackView macOS Tutorial"
 category: macOS
 type: article
 skill: advanced
@@ -10,3 +10,4 @@ tags:
 permalink: /content/macos-stack-views/
 author: "Gabriel Miro"
 ---
+{% include components/post_content.md %}

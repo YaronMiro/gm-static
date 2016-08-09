@@ -59,19 +59,28 @@
         background-color: $value
 
 
-=add-post-category-icon()
-  @each $name in $categories
-
-    &.tutorial__post__header__category__icon--#{$name}
-      background:
-        image: url("/images/elements/tutorial-thumbnail/#{$name}/large.svg")
-        repeat: no-repeat
+=add-color-classes-slash-separator()
+  @each $name, $value in $colors
+    &.c--#{$name}
+      &:not(:last-child)::after
+        color: $value
 
 
 =add-global--color-classes()
   @each $name, $value in $colors
     &.c--#{$name}
       color: $value
+
+
+=add-global-tags-color()
+  @each $category, $color in $categories
+    &.tutorial__post--#{$category}
+
+      code.snippet__base-code
+        color: $color
+
+      ul li::before
+        background-color: $color
 
 
 =add-global--category-border-color-classes()
@@ -86,11 +95,17 @@
       background-color: $value
 
 
+=add-global--bg-color-classes()
+  @each $name, $value in $colors
+    &.bg--#{$name}
+      background-color: $value
+
+
 =page-container()
   margin: 0 1rem
   color: $grey-medium
   font-size: 1.17rem
-  line-height: 1.689rem
+  line-height: 1.589rem
 
   +respond-at(520px)
     margin: 0 2rem
@@ -105,8 +120,10 @@
 =title-with-icon($icon-path)
   position: relative
   margin: 0 0 .6em
-  font-size: 1.6rem
-  font-weight: $weight-regular
+  font-size: 1.5rem
+  font-weight: $weight-thin
+  line-height: 1.1em
+  color: $green
 
   +respond-at(380px)
     padding-left: 1.3em
@@ -133,3 +150,22 @@
 .link-arrow
   &::after
     content: " >>"
+
+.category-style
+  display: inline-block
+  padding: .25em .55em .55em
+  line-height: .6em
+  border: 1px solid
+  border-radius: .185em
+  text-align: center
+  background-color: $white
+  +add-global--category-border-color-classes()
+
+
+.link-with-round-border-style
+  padding: 0 .5em .25em
+  border: 1px solid
+  border-radius: .185em
+  text-decoration: none
+  line-height: 1.3em
+  font-size: 1.05em

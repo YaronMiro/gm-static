@@ -1,0 +1,111 @@
+.tutorial__post__content
+
+  p
+    margin-bottom: 0
+    margin-top: 1.4em
+    font-weight: $weight-light
+    line-height: 1.6em
+
+
+  strong
+    color: $grey-dark
+    font-weight: $weight-medium
+
+
+  h2
+    margin-top: 2em
+    margin-bottom: .25em
+    line-height: 1.3em
+    color: rgba($grey-dark, .9)
+
+
+  pre
+    position: relative
+    margin: 1.4em 0 0
+    padding: .35em 0
+    border: 1px solid rgba($mist, .7)
+    border-radius: .2em
+    font-size: 1.1rem
+    line-height: 0
+    background-color: $soft
+
+
+  code
+    border: 1px solid $soft-border
+    border-left: 0
+    border-right: 0
+    font:
+      family: $monospace
+      weight: $weight-thin
+    line-height: 1.5em
+    font-size: 1em
+    background-color: $white
+
+
+    &.snippet__base-code
+      display: inline-block
+      margin: 0 .35em
+      padding: .35em
+      border: 1px solid $soft-border
+      border-radius: .2em
+      background-color: $soft
+      line-height: 1em
+      font-size: 1.1rem
+
+
+  ul
+    list-style: none
+    margin: 1em 0
+    padding-left: 0
+
+    li
+      position: relative
+      padding-left: 1em
+
+      &::before
+        content: ""
+        position: absolute
+        width: .38em
+        height: .38em
+        top: .75em
+        left: 0
+        background-color: $grey-medium
+
+  img
+   max-width: 100%
+   border: 1px solid $soft-border
+   border-radius: .2em
+
+  .copy__code__snippet__wrapper
+    text-align: right
+
+  .copy__code__snippet
+    +reset-button-style()
+    display: inline-block
+    height: 2em
+    min-width: 5.5em
+    margin: 0 .5em .5em 0
+    padding: 0 .8em
+    color: rgba($grey-medium, .7)
+    font-size: .9em
+    border-radius: .165em
+    border: 1px solid rgba($grey-medium, .2)
+    font-family: $monospace
+    line-height: .5em
+    transition: background-color .2s ease-out, color .2s ease-out
+
+    &:hover
+      color: $grey-medium
+      background: rgba($grey-medium, .25)
+
+    &.copy__code__snippet--success
+      color: $success
+      background: $grey-medium
+
+    &.copy__code__snippet--error
+      color: $error
+      background: $grey-medium
+
+
+  // Adding style color change by category main color.
+  +add-global-tags-color()

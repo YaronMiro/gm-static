@@ -9,3 +9,4 @@ tags:
 permalink: /content/ios-collection-views/
 author: "Gabriel Miro"
 ---
+{% include components/post_content.md %}

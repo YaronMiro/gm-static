@@ -11,3 +11,4 @@ tags:
 permalink: /content/basic-design-pattern-video/
 author: "Gabriel Miro"
 ---
+{% include components/post_content.md %}
