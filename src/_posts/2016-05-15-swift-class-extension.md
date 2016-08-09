@@ -5,7 +5,6 @@ category: Swift
 type: video
 skill: beginner
 tags:
-- Swift
 - Class
 - Extension
 permalink: /content/swift-class-extension/

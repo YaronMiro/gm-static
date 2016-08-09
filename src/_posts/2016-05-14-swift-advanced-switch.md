@@ -5,7 +5,6 @@ category: Swift
 type: video
 skill: advanced
 tags:
-- Swift
 - Switch
 - Syntax
 permalink: /content/swift-advanced-switch/

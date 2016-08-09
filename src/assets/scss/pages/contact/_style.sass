@@ -6,11 +6,11 @@
   margin-bottom: 3em
 
 
-.contact__page__title__contact-icon
+.contact__page__title__contact
   margin: 0 0 1em
   font-size: 1.2em
   font-weight: $weight-thin
-  color: $green
+  color: $grey-medium
 
 
 .form__contact__fields__container
@@ -130,17 +130,19 @@
   display: inline-block
   margin-top: 1em
   padding: 0 .5em .25em
-  color: $green
+  color: $grey-medium
+  background-color: $soft
   width: 100%
-  border: 1px solid rgba($green, .5)
+  border: 1px solid $mist
   border-radius: .185em
   text-align: center
   font-size: .9em
   @extend .link-arrow
 
   &:hover
-    color: darken($green, 13%)
-    border-color: darken($green, 2%)
+    color: $white
+    background-color: $grey-medium
+    border: 1px solid $grey-medium
 
   +respond-at(460px)
     float: right

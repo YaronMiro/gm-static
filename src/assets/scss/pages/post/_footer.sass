@@ -48,6 +48,10 @@
     size: 1.2em
     weight: $weight-light
   line-height: 1em
+  color: $grey-medium
+
+  +respond-at(940px)
+    +add-global--color-classes()
 
 
 .tutorial__post__footer__info__author__slogan
@@ -68,3 +72,6 @@
   display: inline-block
   @extend .link-with-round-border-style
   +add-global--category-border-color-classes()
+
+  &:hover
+    text-decoration: underline
