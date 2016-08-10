@@ -42,19 +42,23 @@
 
 
 .hero__content__container__icons-list
-  margin: 0 0 -.15em 0
-  padding: 0 5%
+  margin: 0
+  padding: 0 20%
   color: $white-medium
   list-style: none
   font-size: .75em
   +clearfix()
-  border: 1px solid $mist
+  border: 1px solid $white
 
-  +respond-at(480px)
-    margin: 0 0 .3em
+  +respond-at(520px)
+    margin-left: auto
+    margin-right: auto
+    padding: 0
+    width: 18.1em
 
   +respond-at(1000px)
-    margin: .7em 0 .15em
+    margin-top: .7em
+    margin-bottom: .15em
 
 
 .hero__content__container__icons-list__item
@@ -70,6 +74,19 @@
 
   &:nth-of-type(2n+1)
     margin-right: 3%
+
+  +respond-at(520px)
+    width: 4em
+    margin-right: .65em
+
+    &:nth-of-type(2n+1)
+      margin-right: .65em
+
+    &:last-child
+      margin-right: 0
+
+    &:nth-of-type(-n+2)
+      margin-bottom: 0
 
 
 .hero__content__container__slogan__logo
